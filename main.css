@@ -1,0 +1,9 @@
+.cust-card h1 {
+    font-size: 64px;
+    padding-top: 10%;
+}
+
+sup {
+    top: -25px !important;
+    padding-right: 5px
+}
