@@ -1,10 +1,10 @@
 <?php
     return [
         "db_configs"=>[
-            'host'=>'localhost',
-            'user'=>'root',
-            'password'=>'',
-            'users_db'=>'digitaAd_users_db'
+            'host'=>'digitadusersdb.cx0dfxutvhub.us-east-2.rds.amazonaws.com',
+            'user'=>'theadmin_at_work',
+            'password'=>'therealadmin',
+            'users_db'=>'digitadusersdb'
         ],
         "encryption_settings"=>[
             'method'=>'AES-192-ECB',
