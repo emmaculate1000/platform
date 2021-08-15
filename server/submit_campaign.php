@@ -1,4 +1,9 @@
 <?php
+	//change configuration settings
+	ini_set('upload_max_filesize', '10M');
+	ini_set('post_max_size', '10M');
+	ini_set('max_input_time', 300);
+	ini_set('max_execution_time', 300);
 	//header('Access-Control-Allow-Origin:http://localhost:8080');
 	header('Access-Control-Allow-Methods:GET,POST');
 	header('Access-Control-Allow-Headers:x-requested-with,Origin,Content-Type,X-Auth-Token,Authorization');
