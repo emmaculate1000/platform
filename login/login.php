@@ -29,7 +29,7 @@
             	if(mysqli_num_rows($query)==1){
             		$result=mysqli_fetch_assoc($query);
             		$user_id=$result['id'];
-            		$first_name=ucfirst(stripslashes($result['first_name']));
+            		$first_name=ucfirst(stripslashes($result['first_nzame']));
             		$last_name=ucfirst(stripslashes($result['last_name']));
             		$email=ucfirst(stripslashes($result['email']));
             		$active=ucfirst($result['active']);
