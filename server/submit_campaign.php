@@ -32,8 +32,9 @@
 		$duration=$campaignDetails->duration;
 		$fSize=$campaignDetails->fSize;
 		$username=$_POST['user_name'];
-		echo $user_id;
-		/*if(isset($_FILES['file']['name'])){
+		echo $campaignName;
+		if(isset($_FILES['file']['name'])){
+			echo "yeah";
 			$videoXtensions=['video/mp4','video/webm'];
 			$imageXtension=['image/jpeg','image/jpg','image/png'];
 			if(in_array($mediaType,$videoXtensions)){
@@ -42,7 +43,7 @@
 				$video_name=$_FILES['file']['name'];
                 $video_folder="../media/";
                 $media_file=video_uploader($video,$video_name,$video_folder);
-				db_store($media_file);
+				//db_store($media_file);
 			}elseif(in_array($mediaType,$imageXtension)){
 				//media is an image 
 				$image=$_FILES['file'];
@@ -50,10 +51,10 @@
 				$image_folder="../img/campaign_img/";//campaign_images
 				$media_file=uploader($image_name,$image,$image_folder);
 				imageRotator($media_file,$image_name,$image_folder);
-				db_store($media_file);
+				//db_store($media_file);
 			}
 			
-		}*/
+		}
 		
 	}else{
 		echo "no";
