@@ -48,6 +48,7 @@
 				$image_name=$_FILES['file']['name'];
 				$image_folder="../img/campaign_img/";//campaign_images
 				$media_file=uploader($image_name,$image,$image_folder);
+				echo $media_file;
 				imageRotator($media_file,$image_name,$image_folder);
 				db_store($media_file);
 			}
@@ -98,7 +99,7 @@
 				print_r($e);
 			}
 		}else{
-			echo $errors[0];
+			//echo $errors[0];
 			echo "no file available";
 		}
 		clearstatcache();
