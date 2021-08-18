@@ -14,6 +14,7 @@
 	ini_set('max_input_time', 300);
 	ini_set('max_execution_time', 300);
 	if(isset($_POST['data'])){
+		echo "yes oo";
 	 	$campaignDetails=json_decode($_POST['data']);
 		$user_id=$_POST['user_id'];
 	 	$campaignName=cleaner($campaignDetails->campaignName);
@@ -29,10 +30,10 @@
 	 	$multiplyConstant=$campaignDetails->multiplyConstant;
 	 	$numberOfDays=$campaignDetails->numberOfDays;
 	 	$numberOfScreens=$campaignDetails->numberOfScreens;
-		 $duration=$campaignDetails->duration;
-		 $fSize=$campaignDetails->fSize;
+		$duration=$campaignDetails->duration;
+		$fSize=$campaignDetails->fSize;
 		$username=$_POST['user_name'];
-		if(isset($_FILES['file']['name'])){
+		/*if(isset($_FILES['file']['name'])){
 			$videoXtensions=['video/mp4','video/webm'];
 			$imageXtension=['image/jpeg','image/jpg','image/png'];
 			if(in_array($mediaType,$videoXtensions)){
@@ -52,7 +53,7 @@
 				db_store($media_file);
 			}
 			
-		}
+		}*/
 		
 	}
 	function db_store($file){
