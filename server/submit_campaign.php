@@ -13,9 +13,7 @@
 	ini_set('post_max_size', '300M');
 	ini_set('max_input_time', 300);
 	ini_set('max_execution_time', 300);*/
-	echo "ok";
 	if(isset($_POST['data'])){
-		echo "yes oo";
 	 	$campaignDetails=json_decode($_POST['data']);
 		$user_id=$_POST['user_id'];
 	 	$campaignName=cleaner($campaignDetails->campaignName);
@@ -34,6 +32,7 @@
 		$duration=$campaignDetails->duration;
 		$fSize=$campaignDetails->fSize;
 		$username=$_POST['user_name'];
+		echo $user_id;
 		/*if(isset($_FILES['file']['name'])){
 			$videoXtensions=['video/mp4','video/webm'];
 			$imageXtension=['image/jpeg','image/jpg','image/png'];
