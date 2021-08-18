@@ -70,6 +70,7 @@
         $db_password=$configs['db_configs']['password'];
         $db=$configs['db_configs']['users_db'];
 		if(file_exists("../img/campaign_img/".$file) or file_exists("../media/".$file)){
+			echo "file exists";
 			//connect to database
 			try{
 				$connection=mysqli_connect($db_host,$db_user,$db_password,$db);
@@ -77,6 +78,7 @@
 					throw new Exception(mysqli_connect_error());
 				}
 				if($connection){
+					echo "connected!";
 					//escape string
 					$campaignNameX=mysqli_real_escape_string($connection,$campaignName);
 					//sql string
