@@ -32,6 +32,7 @@
 		$duration=$campaignDetails->duration;
 		$fSize=$campaignDetails->fSize;
 		$username=$_POST['user_name'];
+		$app="http://digitad.us-east-2.elasticbeanstalk.com/";
 		if(isset($_FILES['file']['name'])){
 			$videoXtensions=['video/mp4','video/webm'];
 			$imageXtension=['image/jpeg','image/jpg','image/png'];
@@ -48,7 +49,6 @@
 				$image_name=$_FILES['file']['name'];
 				$image_folder="../img/campaign_img/";//campaign_images
 				$media_file=uploader($image_name,$image,$image_folder);
-				echo $media_file;
 				imageRotator($media_file,$image_name,$image_folder);
 				db_store($media_file);
 			}
@@ -62,7 +62,7 @@
 		global $campaignName,$campaignCountry,$campaignDate,
 		$startDate,$endDate,$campaignDisplays,$campaignCost,$mediaType,
 		$multiplyConstant,$numberOfDays,$numberOfScreens,
-		$campaignCapacity,$user_id,$username,$duration,$fSize,$errors;
+		$campaignCapacity,$user_id,$username,$duration,$fSize,$errors,$app;
 		$created=date("d-m-Y");
 		//database configs
 		$configs=include('config.php');
@@ -70,7 +70,7 @@
         $db_user=$configs['db_configs']['user'];
         $db_password=$configs['db_configs']['password'];
         $db=$configs['db_configs']['users_db'];
-		if(file_exists("../img/campaign_img/".$file) or file_exists("../media/".$file)){
+		if(file_exists($app."img/campaign_img/".$file) or file_exists($app."media/".$file)){
 			echo "file exists";
 			//connect to database
 			try{
