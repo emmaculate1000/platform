@@ -99,6 +99,7 @@
 			}
 		}else{
 			echo $errors[0];
+			echo "no file available";
 		}
 		clearstatcache();
 	}

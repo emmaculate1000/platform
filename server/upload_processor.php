@@ -1,5 +1,5 @@
 <?php
-	error_reporting(0);
+	//error_reporting(0);
 	//function to upload image
 	function uploader($filename,$file,$storageFolder){
 		//variable holding errors
