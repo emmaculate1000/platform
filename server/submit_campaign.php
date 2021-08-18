@@ -9,10 +9,11 @@
 	//file containing processing functions
     include("processing_functions.php");
 	//change configuration settings
-	ini_set('upload_max_filesize', '300M');
+	/*ini_set('upload_max_filesize', '300M');
 	ini_set('post_max_size', '300M');
 	ini_set('max_input_time', 300);
-	ini_set('max_execution_time', 300);
+	ini_set('max_execution_time', 300);*/
+	echo "ok";
 	if(isset($_POST['data'])){
 		echo "yes oo";
 	 	$campaignDetails=json_decode($_POST['data']);
@@ -55,6 +56,8 @@
 			
 		}*/
 		
+	}else{
+		echo "no";
 	}
 	function db_store($file){
 		global $campaignName,$campaignCountry,$campaignDate,
