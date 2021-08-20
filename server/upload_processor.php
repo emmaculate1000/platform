@@ -14,7 +14,7 @@
 		$finalLocation=$location.$final_file_Name;
 		$templocation=$file['tmp_name'];
 		$fileSize=$file['size'];
-		$allowedExtensions=['jpg','png','wbmp','jpeg'];
+		$allowedExtensions=['jpg','png','wbmp','jpeg','gif','JPG','PNG','JPEG','GIF'];
 		//explode string and get file extension
 		$extension1=explode('.', $newFileName);
 		//get end of string
@@ -22,12 +22,12 @@
 		if(in_array($extension2, $allowedExtensions)){
 			//count errors before movx file
 			if(count($errors)==0){
-				move_uploaded_file($templocation, $finalLocation);
+				$result=move_uploaded_file($templocation, $finalLocation);
 			}
 		}else{
 			array_push($errors,55);
 		}
-		return $final_file_Name;
+		return $result;//$final_file_Name;
 	}
 	//function to upload videos
 	function video_uploader($file,$filename,$storageFolder){
