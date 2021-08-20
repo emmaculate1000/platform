@@ -70,8 +70,8 @@
         $db_user=$configs['db_configs']['user'];
         $db_password=$configs['db_configs']['password'];
         $db=$configs['db_configs']['users_db'];
-		if(file_exists($app."img/campaign_img/".$file) or file_exists($app."media/".$file)){
-			echo "file exists";
+		//if(file_exists($app."img/campaign_img/".$file) or file_exists($app."media/".$file)){
+			//echo "file exists";
 			//connect to database
 			try{
 				$connection=mysqli_connect($db_host,$db_user,$db_password,$db);
@@ -79,7 +79,7 @@
 					throw new Exception(mysqli_connect_error());
 				}
 				if($connection){
-					echo "connected!";
+					//echo "connected!";
 					//escape string
 					$campaignNameX=mysqli_real_escape_string($connection,$campaignName);
 					//sql string
@@ -98,10 +98,10 @@
 			}catch(Exception $e){
 				print_r($e);
 			}
-		}else{
+		/*}else{
 			//echo $errors[0];
 			echo "no file available";
-		}
+		}*/
 		clearstatcache();
 	}
 	
