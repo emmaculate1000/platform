@@ -23,6 +23,7 @@
                 S3::setSignatureVersion('v4');
                 S3::putObject(S3::inputFile($tmpfile), AWS_S3_BUCKET, $path.$final_file_Name, S3::ACL_PUBLIC_READ);
                 unlink($tmpfile);
+                echo "done";
             } else {
                 // Persist to disk
                 ///$path = 'path/to/user/files/'.$file;
