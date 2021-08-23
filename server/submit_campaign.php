@@ -48,15 +48,9 @@
 				$image=$_FILES['file'];
 				$image_name=$_FILES['file']['name'];
 				$image_folder="../img/campaign_img/";//campaign_images
-				//$media_file=uploader($image_name,$image,$image_folder);
-				//echo $media_file;
+				$media_file=uploader($image_name,$image,$image_folder);
 				//imageRotator($media_file,$image_name,$image_folder);
 				//db_store($media_file);
-				if(file_exists("../media/1627784204.mp4")){
-					echo "yes ,file exists";
-				}else{
-					echo "no ,file doesn't exists";
-				}
 			}
 			
 		}
