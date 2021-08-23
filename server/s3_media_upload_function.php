@@ -17,7 +17,7 @@
         if(in_array($extension2, $allowedExtensions)){
 			if (defined('AWS_S3_URL')) {
                 // Persist to AWS S3 and delete uploaded file
-                require_once('S3.php');
+                require_once('s3.php');
                 S3::setAuth(AWS_S3_KEY, AWS_S3_SECRET);
                 S3::setRegion(AWS_S3_REGION);
                 S3::setSignatureVersion('v4');
