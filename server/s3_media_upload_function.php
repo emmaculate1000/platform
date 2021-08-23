@@ -20,7 +20,7 @@
                 require_once('s3.php');
                 S3::setAuth(AWS_S3_KEY, AWS_S3_SECRET);
                // S3::setRegion(AWS_S3_REGION);
-                S3::setSignatureVersion('v4');
+               // S3::setSignatureVersion('v4');
                 S3::putObject(S3::inputFile($tmpfile), AWS_S3_BUCKET, $path.$final_file_Name, S3::ACL_PUBLIC_READ);
                 unlink($tmpfile);
                 echo "done";
