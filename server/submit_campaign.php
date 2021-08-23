@@ -4,11 +4,10 @@
 	header('Access-Control-Allow-Headers:x-requested-with,Origin,Content-Type,X-Auth-Token,Authorization');
 	header('Access-Control-Allow-Credentials:true');
 	include('dataCleaner.php');
-	//include('upload_processor.php');
+	include('upload_processor.php');
 	$errors=[];
 	//file containing processing functions
     include("processing_functions.php");
-	include('s3_media_upload_function.php');
 	//change configuration settings
 	/*ini_set('upload_max_filesize', '300M');
 	ini_set('post_max_size', '300M');
@@ -48,12 +47,16 @@
 				//media is an image 
 				$image=$_FILES['file'];
 				$image_name=$_FILES['file']['name'];
-				$image_folder="campaigns/img/";//campaign_images
+				$image_folder="../img/campaign_img/";//campaign_images
 				//$media_file=uploader($image_name,$image,$image_folder);
-				uploader($image,"img/");
 				//echo $media_file;
 				//imageRotator($media_file,$image_name,$image_folder);
 				//db_store($media_file);
+				if(file_exists("../media/1627784204.mp4")){
+					echo "yes ,file exists";
+				}else{
+					echo "no ,file doesn't exists";
+				}
 			}
 			
 		}
