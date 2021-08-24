@@ -1,6 +1,6 @@
 <?php
 	header('Access-Control-Allow-Origin:http://digitad.us-east-2.elasticbeanstalk.com');
-	header('Access-Control-Allow-Methods:GET,POST');
+	header('Access-Control-Allow-Methods:GET,POST,PUT');
 	header('Access-Control-Allow-Headers:x-requested-with,Origin,Content-Type,X-Auth-Token,Authorization');
 	header('Access-Control-Allow-Credentials:true');
 	include('dataCleaner.php');
@@ -9,10 +9,10 @@
 	//file containing processing functions
     include("processing_functions.php");
 	//change configuration settings
-	/*ini_set('upload_max_filesize', '300M');
+	ini_set('upload_max_filesize', '300M');
 	ini_set('post_max_size', '300M');
 	ini_set('max_input_time', 300);
-	ini_set('max_execution_time', 300);*/
+	ini_set('max_execution_time', 300);
 	if(isset($_POST['data'])){
 	 	$campaignDetails=json_decode($_POST['data']);
 		$user_id=$_POST['user_id'];
@@ -49,8 +49,8 @@
 				$image_name=$_FILES['file']['name'];
 				$image_folder="img/";//campaign_images
 				$media_file=uploader($image_name,$image,$image_folder);
-				//imageRotator($media_file,$image_name,$image_folder);
-				//db_store($media_file);
+				imageRotator($media_file,$image_name,$image_folder);
+				db_store($media_file);
 			}
 		}
 		
