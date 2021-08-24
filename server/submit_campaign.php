@@ -41,16 +41,27 @@
 				$video=$_FILES['file'];
 				$video_name=$_FILES['file']['name'];
                 $video_folder="media/";
+				chmod($video_folder,777);
                 $media_file=video_uploader($video,$video_name,$video_folder);
-				db_store($media_file);
+				if( $media_file!==0){
+					db_store($media_file);
+				}else{
+					echo 0;
+				}
 			}elseif(in_array($mediaType,$imageXtension)){
 				//media is an image 
 				$image=$_FILES['file'];
 				$image_name=$_FILES['file']['name'];
 				$image_folder="img/";//campaign_images
+				chmod($image_folder,777);
+				echo fileperms($image_folder);
 				$media_file=uploader($image_name,$image,$image_folder);
-				imageRotator($media_file,$image_name,$image_folder);
-				db_store($media_file);
+				if($media_file!==0){
+					imageRotator($media_file,$image_name,$image_folder);
+					db_store($media_file);
+				}else{
+					echo 0;
+				}
 			}
 		}
 		
