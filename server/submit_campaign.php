@@ -54,8 +54,6 @@
 			}
 		}
 		
-	}else{
-		echo "no";
 	}
 	function db_store($file){
 		global $campaignName,$campaignCountry,$campaignDate,
@@ -69,7 +67,7 @@
         $db_user=$configs['db_configs']['user'];
         $db_password=$configs['db_configs']['password'];
         $db=$configs['db_configs']['users_db'];
-		//if(file_exists($app."img/campaign_img/".$file) or file_exists($app."media/".$file)){
+		if(file_exists("img/".$file) or file_exists("media/".$file)){
 			//echo "file exists";
 			//connect to database
 			try{
@@ -97,10 +95,7 @@
 			}catch(Exception $e){
 				print_r($e);
 			}
-		/*}else{
-			//echo $errors[0];
-			echo "no file available";
-		}*/
+		}
 		clearstatcache();
 	}
 	
