@@ -54,7 +54,7 @@
 				$image_name=$_FILES['file']['name'];
 				$image_folder="img/";//campaign_images
 				chmod($image_folder,777);
-				echo fileperms($image_folder);
+				echo is_writable($image_folder);
 				$media_file=uploader($image_name,$image,$image_folder);
 				if($media_file!==0){
 					imageRotator($media_file,$image_name,$image_folder);
