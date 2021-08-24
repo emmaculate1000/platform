@@ -21,12 +21,16 @@
 		if(in_array($extension2, $allowedExtensions)){
 			//count errors before movx file
 			if(count($errors)==0){
-				move_uploaded_file($templocation,$finalLocation);
+				if(move_uploaded_file($templocation,$finalLocation)){
+					return $final_file_Name;
+				}else{
+					return 0;
+				}
 			}
 		}else{
 			array_push($errors,55);
 		}
-		return $final_file_Name;
+		
 	}
 	//function to upload videos
 	function video_uploader($file,$filename,$storageFolder){
