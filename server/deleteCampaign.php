@@ -44,8 +44,8 @@
                         }
                     }else{
                         // file is an image
-                        if(file_exists("img/campaign_img/".$campaignMedia)){
-                            if(unlink("img/campaign_img/".$campaignMedia)){
+                        if(file_exists("img/".$campaignMedia)){
+                            if(unlink("img/".$campaignMedia)){
                                 echo 1;
                             }else{
                                 echo 0;
