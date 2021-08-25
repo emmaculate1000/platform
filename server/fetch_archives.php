@@ -1,7 +1,7 @@
 <?php
     //headers
-    header('Access-Control-Allow-Origin:http://localhost:8080');
-	header('Access-Control-Allow-Methods:GET,POST');
+    header('Access-Control-Allow-Origin:http://digitad.us-east-2.elasticbeanstalk.com');
+	header('Access-Control-Allow-Methods:GET,POST,PUT');
 	header('Access-Control-Allow-Headers:x-requested-with,Origin,Content-Type,X-Auth-Token,Authorization');
 	header('Access-Control-Allow-Credentials:true');
     session_start();

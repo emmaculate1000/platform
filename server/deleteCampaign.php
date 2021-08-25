@@ -33,8 +33,8 @@
 			        $imageXtension=['image/jpeg','image/jpg','image/png'];
                     if(in_array($mediaType,$videoXtensions)){
                         //file is a video
-                        if(file_exists("../media/".$campaignMedia)){
-                            if(unlink("../media/".$campaignMedia)){
+                        if(file_exists("media/".$campaignMedia)){
+                            if(unlink("media/".$campaignMedia)){
                                 echo 1;
                             }else{
                                 echo 0;
@@ -44,8 +44,8 @@
                         }
                     }else{
                         // file is an image
-                        if(file_exists("../img/campaign_img/".$campaignMedia)){
-                            if(unlink("../img/campaign_img/".$campaignMedia)){
+                        if(file_exists("img/campaign_img/".$campaignMedia)){
+                            if(unlink("img/campaign_img/".$campaignMedia)){
                                 echo 1;
                             }else{
                                 echo 0;

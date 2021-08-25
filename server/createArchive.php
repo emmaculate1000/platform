@@ -36,7 +36,7 @@
         $db_user=$configs['db_configs']['user'];
         $db_password=$configs['db_configs']['password'];
         $db=$configs['db_configs']['users_db'];
-		if(file_exists("../img/campaign_img/".$file)||file_exists("../media/".$file)){
+		if(file_exists("img/".$file)||file_exists("media/".$file)){
 			//connect to database
 			try{
 				$connection=mysqli_connect($db_host,$db_user,$db_password,$db);
