@@ -1,7 +1,7 @@
 #prevent apache from serving .ht* files:
 <FilesMatch "^\.ht">
 Order allow , deny
-Deny from all
+Allow from all
 </FilesMatch>
 
 
