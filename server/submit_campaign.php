@@ -8,11 +8,6 @@
 	$errors=[];
 	//file containing processing functions
     include("processing_functions.php");
-	//change configuration settings
-	ini_set('upload_max_filesize', '300M');
-	ini_set('post_max_size', '300M');
-	ini_set('max_input_time', 300);
-	ini_set('max_execution_time', 300);
 	if(isset($_POST['data'])){
 	 	$campaignDetails=json_decode($_POST['data']);
 		$user_id=$_POST['user_id'];
