@@ -38,20 +38,20 @@
 							//send user a mail
 		                   $mail=new PHPMailer();
 		                    //$mail->isSMTP();
-		                    $mail->Host='victexgroup.com';
+		                    $mail->Host='digitad-ooh.com';
 		                    $mail->Port=465;
 		                    $mail->SMTPAuth=true;
 		                    $mail->SMTPSecure='tls';
-		                    $mail->Username="info@victexgroup.com";
-		                    $mail->Password="@123victexconnect";
-		                   	$mail->setFrom('info@victexgroup.com',"Digit-Ad");
+		                    $mail->Username="boss1000_me";
+		                    $mail->Password="emmaculate1000@Me";
+		                   	$mail->setFrom('noreply@digitad-ooh.com',"Digit-Ad");
 		                    $mail->addAddress($email);
-		                    $mail->addReplyTo('info@victexgroup.com');
+		                    $mail->addReplyTo();
 		                    $mail->isHTML(true);
 		                    $mail->Subject="SIGN UP CONFIRMATION";
-		                    $mail->Body="<h1 style='text-align:center;color:green;'>
+		                    $mail->Body="<h1 style='text-align:center;'>
 		                    Click the link below to confirm your sign up and activate your account<br><br>
-		                    <a style='width:80%;margin:10px 10%;color:#e36f21;text-decoration:none;' href='https://www.victexgroup.com/digit-Ad/confirm_user.php?item=$passwordX'>
+		                    <a style='width:80%;margin:10px 10%;color:yellow;text-decoration:none;' href='https://www.victexgroup.com/digit-Ad/confirm_user.php?item=$passwordX'>
 		                    Click Here To Confirm Your Email Address</a>
 		                    </h1>";
 		                    if(!$mail->send()){
