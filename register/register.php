@@ -11,7 +11,8 @@
 			$l_name=cleaner($_POST['l_name']);
 			$email=$_POST['email'];
 			$password=$_POST['password'];
-			if(!empty($f_name) and !empty($l_name)and !empty($email)and !empty($password))
+			echo $email;
+			/*if(!empty($f_name) and !empty($l_name)and !empty($email)and !empty($password))
 			{
 				try{
 					//connect to datatbase
@@ -64,7 +65,7 @@
 				}catch(Exception $e){
 					print_r($e);
 				}
-			}
+			}*/
 		}
 	}
 	
