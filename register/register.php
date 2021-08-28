@@ -1,10 +1,11 @@
 <?php
 	session_start();
 	//include satization script
-	include('../dataCleaner.php');
-	require 'PHPMailer/PHPMailerAutoload.php';
+	//include('../dataCleaner.php');
+	//require 'PHPMailer/PHPMailerAutoload.php';
 	//include config file
-	$configs=include('../config.php');
+	//$configs=include('../config.php');
+	echo "bon";
 	if($_SERVER['REQUEST_METHOD']=='POST'){
 		if(isset($_POST['purpose']) AND $_POST['purpose']=='registration'){
 			$f_name=cleaner($_POST['f_name']);
