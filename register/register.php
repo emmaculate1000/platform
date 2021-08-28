@@ -6,14 +6,14 @@
 	//include config file
 	//$configs=include('../config.php');
 	echo "bon";
-	if($_SERVER['REQUEST_METHOD']=='POST'){
+	/*if($_SERVER['REQUEST_METHOD']=='POST'){
 		if(isset($_POST['purpose']) AND $_POST['purpose']=='registration'){
 			$f_name=cleaner($_POST['f_name']);
 			$l_name=cleaner($_POST['l_name']);
 			$email=$_POST['email'];
 			$password=$_POST['password'];
 			echo $email;
-			/*if(!empty($f_name) and !empty($l_name)and !empty($email)and !empty($password))
+			if(!empty($f_name) and !empty($l_name)and !empty($email)and !empty($password))
 			{
 				try{
 					//connect to datatbase
@@ -66,8 +66,8 @@
 				}catch(Exception $e){
 					print_r($e);
 				}
-			}*/
+			}
 		}
-	}
+	}*/
 	
 ?>
