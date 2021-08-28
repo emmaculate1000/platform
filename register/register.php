@@ -2,7 +2,8 @@
 	session_start();
 	//include satization script
 	include('../dataCleaner.php');
-	//require 'PHPMailer/PHPMailerAutoload.php';
+	//php mailer
+	include('PHPMailer/PHPMailerAutoload.php');
 	//include config file
 	$configs=include('../config.php');
 	echo "bon";
