@@ -2,7 +2,7 @@
 	session_start();
 	//include satization script
 	include('../dataCleaner.php');
-	//require 'PHPMailer/PHPMailerAutoload.php';
+	require 'PHPMailer/PHPMailerAutoload.php';
 	//include config file
 	$configs=include('../config.php');
 	if($_SERVER['REQUEST_METHOD']=='POST'){
