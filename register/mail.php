@@ -50,13 +50,13 @@
 
         try {
             // Specify the SMTP settings.
-           // $mail->isSMTP();
+            $mail->isSMTP();
             $mail->setFrom($sender, $senderName);
             $mail->Username   = $usernameSmtp;
             $mail->Password   = $passwordSmtp;
             $mail->Host       = $host;
             $mail->Port       = $port;
-            $mail->SMTPAuth   = true;
+            $mail->SMTPAuth   = false;
             $mail->SMTPSecure = 'tls';
             $mail->addCustomHeader('X-SES-CONFIGURATION-SET', $configurationSet);
 
