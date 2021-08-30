@@ -56,7 +56,7 @@
             $mail->Password   = $passwordSmtp;
             $mail->Host       = $host;
             $mail->Port       = $port;
-            $mail->SMTPAuth   = false;
+            $mail->SMTPAuth   = true;
             $mail->SMTPSecure = 'tls';
             $mail->addCustomHeader('X-SES-CONFIGURATION-SET', $configurationSet);
 
