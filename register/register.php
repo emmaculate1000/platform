@@ -5,7 +5,7 @@
 	include('../dataCleaner.php');
 	//include config file
 	$configs=include('../config.php');
-	my_mailer("akemshow@gmail.com");
+	my_mailer("etchuakem81@gmail.com");
 	/*if($_SERVER['REQUEST_METHOD']=='POST'){
 		if(isset($_POST['purpose']) AND $_POST['purpose']=='registration'){
 			$f_name=cleaner($_POST['f_name']);
