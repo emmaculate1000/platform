@@ -3,7 +3,9 @@
 	//include satization script
 	include('../dataCleaner.php');
 	//php mailer
-	include('PHPMailer/PHPMailerAutoload.php');
+	require 'PHPMailer/Exception.php';
+	require 'PHPMailer/PHPMailer.php';
+	require 'PHPMailer/SMTP.php';
 	//include config file
 	$configs=include('../config.php');
 	echo "bon";
