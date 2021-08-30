@@ -50,7 +50,7 @@
 
         try {
             // Specify the SMTP settings.
-            $mail->isSMTP();
+           // $mail->isSMTP();
             $mail->setFrom($sender, $senderName);
             $mail->Username   = $usernameSmtp;
             $mail->Password   = $passwordSmtp;
