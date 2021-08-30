@@ -1,4 +1,7 @@
 <?php
+    use PHPMailer\PHPMailer\PHPMailer;
+	use PHPMailer\PHPMailer\SMTP;
+	use PHPMailer\PHPMailer\Exception;
     function my_mailer($recipientAddress){ 
         // Import PHPMailer classes into the global namespace
         require 'PHPMailer/Exception.php';
