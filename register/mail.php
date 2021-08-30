@@ -9,7 +9,7 @@
 	    require 'PHPMailer/SMTP.php';
         // Replace sender@example.com with your "From" address.
         // This address must be verified with Amazon SES.
-        $sender = "noreply@digitadooh.com";
+        $sender = "emmaculateakem@gmail.com";
         $senderName = "Digit-Ad";
 
         // Replace recipient@example.com with a "To" address. If your account
@@ -17,10 +17,10 @@
         $recipient = $recipientAddress;
 
         // Replace smtp_username with your Amazon SES SMTP user name.
-        $usernameSmtp = 'boss1000_me';
+        $usernameSmtp = 'emmaculateakem@gmail.com';
 
         // Replace smtp_password with your Amazon SES SMTP password.
-        $passwordSmtp = 'emmaculate1000@Me';
+        $passwordSmtp = 'emmaculate1000';
 
         // Specify a configuration set. If you do not want to use a configuration
         // set, comment or remove the next line.
@@ -29,7 +29,7 @@
         // If you're using Amazon SES in a region other than US West (Oregon),
         // replace email-smtp.us-west-2.amazonaws.com with the Amazon SES SMTP
         // endpoint in the appropriate region.
-        $host = 'digitad.awsapps.com/mail';
+        $host = 'smtp.gmail.com';
         $port = 465;
 
         // The subject line of the email
