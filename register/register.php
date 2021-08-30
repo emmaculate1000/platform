@@ -2,13 +2,9 @@
 	session_start();
 	//include satization script
 	include('../dataCleaner.php');
-	//php mailer
-	require 'PHPMailer/Exception.php';
-	require 'PHPMailer/PHPMailer.php';
-	require 'PHPMailer/SMTP.php';
 	//include config file
 	$configs=include('../config.php');
-	echo "bon";
+	my_mailer("akemshow@gmail.com");
 	/*if($_SERVER['REQUEST_METHOD']=='POST'){
 		if(isset($_POST['purpose']) AND $_POST['purpose']=='registration'){
 			$f_name=cleaner($_POST['f_name']);
