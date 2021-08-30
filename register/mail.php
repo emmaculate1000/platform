@@ -17,10 +17,10 @@
         $recipient = $recipientAddress;
 
         // Replace smtp_username with your Amazon SES SMTP user name.
-        $usernameSmtp = 'AKIAVGKKEX76ZXS6Q24I';
+        $usernameSmtp = 'boss1000_me';
 
         // Replace smtp_password with your Amazon SES SMTP password.
-        $passwordSmtp = 'BPclDev9aF1tcl2MXzND2DxHrjzLY5ufgTjz/BIRAHi9';
+        $passwordSmtp = 'emmaculate1000@Me';
 
         // Specify a configuration set. If you do not want to use a configuration
         // set, comment or remove the next line.
@@ -29,7 +29,7 @@
         // If you're using Amazon SES in a region other than US West (Oregon),
         // replace email-smtp.us-west-2.amazonaws.com with the Amazon SES SMTP
         // endpoint in the appropriate region.
-        $host = 'email-smtp.us-east-2.amazonaws.com';
+        $host = 'digitad.awsapps.com/mail';
         $port = 465;
 
         // The subject line of the email
