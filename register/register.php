@@ -1,6 +1,6 @@
 <?php
-	session_start();
 	include('mail.php');
+	session_start();
 	//include satization script
 	include('../dataCleaner.php');
 	//include config file
@@ -10,8 +10,8 @@
 		if(isset($_POST['purpose']) AND $_POST['purpose']=='registration'){
 			$f_name=cleaner($_POST['f_name']);
 			$l_name=cleaner($_POST['l_name']);
-			$email=$_POST['email'];
-			$password=$_POST['password'];
+			$email=cleaner($_POST['email']);
+			$password=cleaner($_POST['password']);
 			echo $email;
 			if(!empty($f_name) and !empty($l_name)and !empty($email)and !empty($password))
 			{
