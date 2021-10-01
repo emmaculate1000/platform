@@ -20,7 +20,7 @@
         $usernameSmtp = 'AKIAVGKKEX76ZXS6Q24I';
 
         // Replace smtp_password with your Amazon SES SMTP password.
-        $passwordSmtp = '';
+        $passwordSmtp = 'BPclDev9aF1tcl2MXzND2DxHrjzLY5ufgTjz/BIRAHi9';
 
         // Specify a configuration set. If you do not want to use a configuration
         // set, comment or remove the next line.
