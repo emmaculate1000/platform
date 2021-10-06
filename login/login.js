@@ -16,17 +16,28 @@ $(document).ready(function(){
 					console.log(data);
 					if(status=='success'){
 						if(data==1){
+							var user = 'pi';
+							var password = 'pi';
+							var base64encodedData =Buffer.from(user + ':' + password).toString('base64');
+							$.ajax({
+								url:'http://18.223.184.39:3000/',
+								type: 'GET',
+								dataType: 'json',
+								headers: { 
+									'Content-Type': 'application/json',
+									'Authorization': `Basic ${base64encodedData}`
+								},
+								contentType: 'application/json; charset=utf-8',
+								success: function (result) {
+								   console.log(result);
+								},
+								error: function (error) {
+									console.log(error);
+								}
+							});
+							//delete file from pisignage
 							//redirect to dashboard
 							//window.location="http://digitad.us-east-2.elasticbeanstalk.com";
-							//log user into pi server
-							$.get('http://pi:pi@18.223.184.39:3000/',
-								function(data){
-									console.log(data);
-									if(data!==0){
-
-									}
-								}
-							)
 						}else{
 							//clear input fields
 							$(".response").show(100).html("Invalid Email / Password")
