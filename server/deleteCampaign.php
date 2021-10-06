@@ -29,32 +29,7 @@
                 $result=mysqli_query($connection,$sql);
                 $result2=mysqli_query($connection,$sql2);
                 if($result or $result2){
-                    $videoXtensions=['video/mp4','video/webm'];
-			        $imageXtension=['image/jpeg','image/jpg','image/png'];
-                    if(in_array($mediaType,$videoXtensions)){
-                        //file is a video
-                        if(file_exists("media/".$campaignMedia)){
-                            if(unlink("media/".$campaignMedia)){
-                                echo 1;
-                            }else{
-                                echo 0;
-                            }
-                        }else{
-                            echo 0;
-                        }
-                    }else{
-                        // file is an image
-                        if(file_exists("img/".$campaignMedia)){
-                            if(unlink("img/".$campaignMedia)){
-                                echo 1;
-                            }else{
-                                echo 0;
-                            }
-                        }else{
-                            echo 0;
-                        }
-                    }
-                    clearstatcache();
+                    echo 1;
                 }else{
                     throw new Exception(mysqli_error($result));
                 }
