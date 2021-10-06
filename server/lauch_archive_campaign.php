@@ -36,36 +36,32 @@
         $db_user=$configs['db_configs']['user'];
         $db_password=$configs['db_configs']['password'];
         $db=$configs['db_configs']['users_db'];
-		if(file_exists("img/".$file)||file_exists("media/".$file)){
-			//connect to database
-			try{
-				$connection=mysqli_connect($db_host,$db_user,$db_password,$db);
-				if(mysqli_connect_error()){
-					throw new Exception(mysqli_connect_error());
-				}
-				if($connection){
-					//escape string
-					$campaignNameX=mysqli_real_escape_string($connection,$campaignName);
-					//sql string
-					$sql="INSERT INTO digit_ad_campaign_store(user_id,user_name,campaign_name,country,start_date,end_date,created,displays,
-					media,media_type,capacity,cost,numberOfScreens,numberOfDays,multiplyConstant,campaignDate,approved,paid) 
-					VALUES($user_id,'$username','$campaignNameX','$campaignCountry','$startDate','$endDate','$created','$campaignDisplays','$file','$mediaType','$campaignCapacity',
-						$campaignCost,$numberOfScreens,$numberOfDays,$multiplyConstant,'$campaignDate',1,0)";
-					$result=mysqli_query($connection,$sql);
-					if($result){
-						echo 1;	
-					}else{
-						throw new Exception(mysqli_error($result));
-					}
-					mysqli_close($connection);
-				}
-			}catch(Exception $e){
-				print_r($e);
+		//connect to database
+		try{
+			$connection=mysqli_connect($db_host,$db_user,$db_password,$db);
+			if(mysqli_connect_error()){
+				throw new Exception(mysqli_connect_error());
 			}
-		}else{
-            echo 5;
-        }
-		clearstatcache();
+			if($connection){
+				//escape string
+				$campaignNameX=mysqli_real_escape_string($connection,$campaignName);
+				//sql string
+				$sql="INSERT INTO digit_ad_campaign_store(user_id,user_name,campaign_name,country,start_date,end_date,created,displays,
+				media,media_type,capacity,cost,numberOfScreens,numberOfDays,multiplyConstant,campaignDate,approved,paid) 
+				VALUES($user_id,'$username','$campaignNameX','$campaignCountry','$startDate','$endDate','$created','$campaignDisplays','$file','$mediaType','$campaignCapacity',
+					$campaignCost,$numberOfScreens,$numberOfDays,$multiplyConstant,'$campaignDate',1,0)";
+				$result=mysqli_query($connection,$sql);
+				if($result){
+					echo 1;	
+				}else{
+					throw new Exception(mysqli_error($result));
+				}
+				mysqli_close($connection);
+			}
+		}catch(Exception $e){
+			print_r($e);
+		}
+		
 	}
 	function deactivate_archive(){
 		global  $archive_id;
