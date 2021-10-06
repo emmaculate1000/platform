@@ -17,7 +17,7 @@ $(document).ready(function(){
 					if(status=='success'){
 						if(data==1){
 							//redirect to dashboard
-							window.location="http://digitad.us-east-2.elasticbeanstalk.com";
+							//window.location="http://digitad.us-east-2.elasticbeanstalk.com";
 							//log user into pi server
 							$.get('http://pi:pi@18.223.184.39:3000/',
 								function(data){
