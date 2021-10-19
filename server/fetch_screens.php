@@ -1,6 +1,6 @@
 <?php
 	if($_SERVER['REQUEST_METHOD']=='GET'){
-		$configs=include('config.php');
+		$configs=include('../../config.php');
 		try{
 			//connect to datatbase
 		    $db_host=$configs['db_configs']['host'];
@@ -28,6 +28,7 @@
 						$price_per_day=$row['price'];
 						$population=$row['population'];
 						$state=$row['state'];
+						$playlist=$row['playlist'];
 						$screen_data=[
 							'country'=>$country,
 							'city'=>$city,
@@ -39,7 +40,8 @@
 							'gdp'=>$gdp,
 							'price_per_day'=>$price_per_day,
 							'population'=>$population,
-							'state'=>$state
+							'state'=>$state,
+							'playlist'=>$playlist
 						];
 						array_push($screens_info,$screen_data);
 					}
