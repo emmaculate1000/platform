@@ -1,6 +1,6 @@
 <?php
 	if($_SERVER['REQUEST_METHOD']=='GET'){
-		$configs=include('../../config.php');
+		$configs=include('../config.php');
 		try{
 			//connect to datatbase
 		    $db_host=$configs['db_configs']['host'];
