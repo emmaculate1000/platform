@@ -29,7 +29,6 @@
 						$population=$row['population'];
 						$state=$row['state'];
 						$playlist=$row['playlist'];
-						$screenObj=$row['screenObj'];
 						$screen_data=[
 							'country'=>$country,
 							'city'=>$city,
@@ -43,7 +42,6 @@
 							'population'=>$population,
 							'state'=>$state,
 							'playlist'=>$playlist,
-							'screenObj'=>$screenObj
 						];
 						array_push($screens_info,$screen_data);
 					}
