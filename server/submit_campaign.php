@@ -75,9 +75,9 @@
 				$campaignNameX=mysqli_real_escape_string($connection,$campaignName);
 				//sql string
 				$sql="INSERT INTO digit_ad_campaign_store(user_id,user_name,campaign_name,country,start_date,end_date,created,displays,
-				media,duration,fsize,media_type,capacity,cost,numberOfScreens,numberOfDays,multiplyConstant,campaignDate,screenObj) 
+				media,duration,fsize,media_type,capacity,cost,numberOfScreens,numberOfDays,multiplyConstant,campaignDate) 
 				VALUES($user_id,'$username','$campaignNameX','$campaignCountry','$startDate','$endDate','$created','$campaignDisplays','$file',$duration,$fSize,'$mediaType','$campaignCapacity',
-					$campaignCost,$numberOfScreens,$numberOfDays,$multiplyConstant,'$campaignDate','$campaignDisplays')";
+					$campaignCost,$numberOfScreens,$numberOfDays,$multiplyConstant,'$campaignDate')";
 				$result=mysqli_query($connection,$sql);
 				if($result){
 					echo 1;	
