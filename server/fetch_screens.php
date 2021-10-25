@@ -29,6 +29,13 @@
 						$population=$row['population'];
 						$state=$row['state'];
 						$playlist=$row['playlist'];
+						$runStart=$row['runStart'];
+						$runEnd=$row['runEnd'];
+						$deployed=$row['deployed'];
+						$updatedDate=$row['updatedDate'];
+						$numPlayedDays=$row['numPlayedDays'];
+						$usedBudget=$row['usedBudget'];
+						$expiredDate=$row['expiredDate'];
 						$screen_data=[
 							'country'=>$country,
 							'city'=>$city,
@@ -42,6 +49,13 @@
 							'population'=>$population,
 							'state'=>$state,
 							'playlist'=>$playlist,
+							'runStart'=>$runStart,
+							'runEnd'=>$runEnd,
+							'deployed'=>$deployed,
+							'updatedDate'=>$updatedDate,
+							'numPlayedDays'=>$numPlayedDays,
+							'usedBudget'=>$usedBudget,
+							'expiredDate'=>$expiredDate
 						];
 						array_push($screens_info,$screen_data);
 					}
