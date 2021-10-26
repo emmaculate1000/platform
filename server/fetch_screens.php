@@ -55,7 +55,8 @@
 							'updatedDate'=>$updatedDate,
 							'numPlayedDays'=>$numPlayedDays,
 							'usedBudget'=>$usedBudget,
-							'expiredDate'=>$expiredDate
+							'expiredDate'=>$expiredDate,
+							'numPlayedDays'=>$numPlayedDays
 						];
 						array_push($screens_info,$screen_data);
 					}
