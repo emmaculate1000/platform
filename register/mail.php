@@ -29,7 +29,7 @@
         // If you're using Amazon SES in a region other than US West (Oregon),
         // replace email-smtp.us-west-2.amazonaws.com with the Amazon SES SMTP
         // endpoint in the appropriate region.
-        $host = 'email-smtp.us-east-1.amazonaws.com';
+        $host = 'email-smtp.us-east-2.amazonaws.com';
         $port = 465;
 
         // The subject line of the email
@@ -51,18 +51,17 @@
         try {
             // Specify the SMTP settings.
            // $mail->isSMTP();
+            $mail->setFrom($sender, $senderName);
             $mail->Username   = $usernameSmtp;
             $mail->Password   = $passwordSmtp;
-            $mail->Host       = "smtp.gmail.com";
+            $mail->Host       = $host;
             $mail->Port       = $port;
             $mail->SMTPAuth   = true;
             $mail->SMTPSecure = 'tls';
             $mail->addCustomHeader('X-SES-CONFIGURATION-SET', $configurationSet);
 
             // Specify the message recipients.
-            $mail->setFrom($recipient, 'Mailer');
-            $mail->addAddress($sender, 'Etchu Akem');     //Add a recipient
-            $mail->addReplyTo($sender, 'Information');
+            $mail->addAddress($recipient);
             // You can also add CC, BCC, and additional To recipients here.
 
             // Specify the content of the message.
