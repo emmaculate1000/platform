@@ -69,8 +69,11 @@
             $mail->Subject    = $subject;
             $mail->Body       = $bodyHtml;
             $mail->AltBody    = $bodyText;
-            $mail->Send();
-            echo "Email sent!" , PHP_EOL;
+            if($mail->Send()){
+                echo 1;
+            }else{
+                echo 0;
+            }
         } catch (phpmailerException $e) {
             echo "An error occurred. {$e->errorMessage()}", PHP_EOL; //Catch errors from PHPMailer.
         } catch (Exception $e) {

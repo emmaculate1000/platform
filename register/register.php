@@ -4,7 +4,7 @@
 	//include satization script
 	include('../dataCleaner.php');
 	//include config file
-	my_mailer("akemshow@gmail.com");
+	my_mailer("emmaculateakem@gmail.com");
 	/*if($_SERVER['REQUEST_METHOD']=='POST'){
 		$configs=include('../config.php');
 		if(isset($_POST['purpose']) AND $_POST['purpose']=='registration'){
