@@ -7,9 +7,9 @@
 	//include satization script
 	include('../dataCleaner.php');
 	//include config file
-	//$configs=include('../config.php');
 	//my_mailer("akemshow@gmail.com");
 	if($_SERVER['REQUEST_METHOD']=='POST'){
+		$configs=include('../config.php');
 		if(isset($_POST['purpose']) AND $_POST['purpose']=='registration'){
 			$f_name=cleaner($_POST['f_name']);
 			$l_name=cleaner($_POST['l_name']);
