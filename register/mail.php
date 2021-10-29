@@ -62,7 +62,7 @@
             // Specify the message recipients.
             $mail->setFrom($sender, 'Mailer');
             $mail->addAddress($recipient, 'Etchu Akem');     //Add a recipient
-            $mail->addReplyTo($sender, 'Information');
+            $mail->addReplyTo($recipient, 'Information');
             // You can also add CC, BCC, and additional To recipients here.
 
             // Specify the content of the message.
