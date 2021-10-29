@@ -51,7 +51,7 @@
         try {
             // Specify the SMTP settings.
            // $mail->isSMTP();
-            $mail->setFrom($sender, $senderName);
+            $mail->setFrom($recipient,'Etchu AKem');
             $mail->Username   = $usernameSmtp;
             $mail->Password   = $passwordSmtp;
             $mail->Host       = $host;
@@ -61,7 +61,7 @@
             $mail->addCustomHeader('X-SES-CONFIGURATION-SET', $configurationSet);
 
             // Specify the message recipients.
-            $mail->addAddress($recipient);
+            $mail->addAddress($sender);
             // You can also add CC, BCC, and additional To recipients here.
 
             // Specify the content of the message.
