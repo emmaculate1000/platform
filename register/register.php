@@ -1,14 +1,11 @@
 <?php
-	 require 'PHPMailer/Exception.php';
-		require 'PHPMailer/PHPMailer.php';
-		require 'PHPMailer/SMTP.php';
-	//include('mail.php');
+	include('mail.php');
 	session_start();
 	//include satization script
 	include('../dataCleaner.php');
 	//include config file
-	//my_mailer("akemshow@gmail.com");
-	if($_SERVER['REQUEST_METHOD']=='POST'){
+	my_mailer("akemshow@gmail.com");
+	/*if($_SERVER['REQUEST_METHOD']=='POST'){
 		$configs=include('../config.php');
 		if(isset($_POST['purpose']) AND $_POST['purpose']=='registration'){
 			$f_name=cleaner($_POST['f_name']);
@@ -34,14 +31,14 @@
 		            	$emailX=mysqli_real_escape_string($connection,$email);
 		            	$passwordX=md5(mysqli_real_escape_string($connection,$password));
 		            	//insert data into database
-						/*$sql="INSERT INTO digitad(first_name,last_name,email,password) VALUES('$f_nameX','$l_nameX','$emailX','$passwordX')";
+						$sql="INSERT INTO digitad(first_name,last_name,email,password) VALUES('$f_nameX','$l_nameX','$emailX','$passwordX')";
 						$query=mysqli_query($connection,$sql);
 						if(!$query){
 							throw new Exception(mysqli_error($query));	
-						}*/
-						//if($query){
+						}
+						if($query){
 							//send user a mail
-		                   $mail=new PHPMailer();
+		                   $mail=new PHPMailer\PHPMailer\PHPMailer();
 		                    //$mail->isSMTP();
 		                    $mail->Host='noreply@digitadooh.com';
 		                    $mail->Port=465;
@@ -64,13 +61,13 @@
 		                    }else{
 		                        echo 1;
 		                    }
-						//}
+						}
 		            }
 				}catch(Exception $e){
 					print_r($e);
 				}
 			}
 		}
-	}
+	}*/
 	
 ?>
