@@ -53,7 +53,7 @@
            // $mail->isSMTP();
             $mail->Username   = $usernameSmtp;
             $mail->Password   = $passwordSmtp;
-            $mail->Host       = $host;
+            $mail->Host       = "smtp.gmail.com";
             $mail->Port       = $port;
             $mail->SMTPAuth   = true;
             $mail->SMTPSecure = 'tls';
