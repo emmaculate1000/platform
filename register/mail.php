@@ -9,7 +9,7 @@
 	    require 'PHPMailer/SMTP.php';
         // Replace sender@example.com with your "From" address.
         // This address must be verified with Amazon SES.
-        $sender = "noreply@digitadooh.com";
+        $sender = " noreply@digitadooh.com";
         $senderName = "Digit-Ad";
 
         // Replace recipient@example.com with a "To" address. If your account
@@ -29,7 +29,7 @@
         // If you're using Amazon SES in a region other than US West (Oregon),
         // replace email-smtp.us-west-2.amazonaws.com with the Amazon SES SMTP
         // endpoint in the appropriate region.
-        $host = 'email-smtp.us-east-2.amazonaws.com';
+        $host = 'email-smtp.us-east-1.amazonaws.com';
         $port = 465;
 
         // The subject line of the email
@@ -50,7 +50,7 @@
 
         try {
             // Specify the SMTP settings.
-           // $mail->isSMTP();
+            //$mail->isSMTP();
             $mail->setFrom($sender, $senderName);
             $mail->Username   = $usernameSmtp;
             $mail->Password   = $passwordSmtp;
@@ -69,11 +69,8 @@
             $mail->Subject    = $subject;
             $mail->Body       = $bodyHtml;
             $mail->AltBody    = $bodyText;
-            if($mail->Send()){
-                echo 1;
-            }else{
-                echo 0;
-            }
+            $mail->Send();
+            echo "Email sent!" , PHP_EOL;
         } catch (phpmailerException $e) {
             echo "An error occurred. {$e->errorMessage()}", PHP_EOL; //Catch errors from PHPMailer.
         } catch (Exception $e) {
