@@ -1,7 +1,9 @@
 <?php
-	 use PHPMailer\PHPMailer\PHPMailer;
 	 use PHPMailer\PHPMailer\SMTP;
 	 use PHPMailer\PHPMailer\Exception;
+	 require 'path/to/PHPMailer/src/Exception.php';
+		require 'path/to/PHPMailer/src/PHPMailer.php';
+		require 'path/to/PHPMailer/src/SMTP.php';
 	//include('mail.php');
 	session_start();
 	//include satization script
