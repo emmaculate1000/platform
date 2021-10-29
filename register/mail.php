@@ -9,7 +9,7 @@
 	    require 'PHPMailer/SMTP.php';
         // Replace sender@example.com with your "From" address.
         // This address must be verified with Amazon SES.
-        $sender = " noreply@digitadooh.com";
+        $sender = "noreply@digitadooh.com";
         $senderName = "Digit-Ad";
 
         // Replace recipient@example.com with a "To" address. If your account

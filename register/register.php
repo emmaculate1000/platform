@@ -1,12 +1,15 @@
 <?php
-	include('mail.php');
+	 use PHPMailer\PHPMailer\PHPMailer;
+	 use PHPMailer\PHPMailer\SMTP;
+	 use PHPMailer\PHPMailer\Exception;
+	//include('mail.php');
 	session_start();
 	//include satization script
 	include('../dataCleaner.php');
 	//include config file
-	$configs=include('../config.php');
-	my_mailer("akemshow@gmail.com");
-	/*if($_SERVER['REQUEST_METHOD']=='POST'){
+	//$configs=include('../config.php');
+	//my_mailer("akemshow@gmail.com");
+	if($_SERVER['REQUEST_METHOD']=='POST'){
 		if(isset($_POST['purpose']) AND $_POST['purpose']=='registration'){
 			$f_name=cleaner($_POST['f_name']);
 			$l_name=cleaner($_POST['l_name']);
@@ -31,24 +34,24 @@
 		            	$emailX=mysqli_real_escape_string($connection,$email);
 		            	$passwordX=md5(mysqli_real_escape_string($connection,$password));
 		            	//insert data into database
-						$sql="INSERT INTO digitad(first_name,last_name,email,password) VALUES('$f_nameX','$l_nameX','$emailX','$passwordX')";
+						/*$sql="INSERT INTO digitad(first_name,last_name,email,password) VALUES('$f_nameX','$l_nameX','$emailX','$passwordX')";
 						$query=mysqli_query($connection,$sql);
 						if(!$query){
 							throw new Exception(mysqli_error($query));	
-						}
-						if($query){
+						}*/
+						//if($query){
 							//send user a mail
 		                   $mail=new PHPMailer();
 		                    //$mail->isSMTP();
-		                    $mail->Host='digitad-ooh.com';
+		                    $mail->Host='noreply@digitadooh.com';
 		                    $mail->Port=465;
 		                    $mail->SMTPAuth=true;
 		                    $mail->SMTPSecure='tls';
-		                    $mail->Username="boss1000_me";
-		                    $mail->Password="emmaculate1000@Me";
-		                   	$mail->setFrom('noreply@digitad-ooh.com',"Digit-Ad");
-		                    $mail->addAddress($email);
-		                    $mail->addReplyTo();
+		                    $mail->Username="AKIAVGKKEX76ZXS6Q24I";
+		                    $mail->Password="BPclDev9aF1tcl2MXzND2DxHrjzLY5ufgTjz/BIRAHi9";
+		                   	$mail->setFrom('noreply@digitadooh.com',"Digit-Ad");
+		                    $mail->addAddress('akemshow@gmail.com');
+		                    $mail->addReplyTo('noreply@digitadooh.com');
 		                    $mail->isHTML(true);
 		                    $mail->Subject="SIGN UP CONFIRMATION";
 		                    $mail->Body="<h1 style='text-align:center;'>
@@ -61,13 +64,13 @@
 		                    }else{
 		                        echo 1;
 		                    }
-						}
+						//}
 		            }
 				}catch(Exception $e){
 					print_r($e);
 				}
 			}
 		}
-	}*/
+	}
 	
 ?>
