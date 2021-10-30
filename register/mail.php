@@ -40,11 +40,12 @@
             Amazon SES SMTP interface using the PHPMailer class.";
 
         // The HTML-formatted body of the email
+        $userId=$passwordX."-".$recipientAddress;
         $bodyHtml = "<h1>Email Test</h1>
             <p>
             Thanks for registering on Digit-Ad click the link below to confirm your email address
 
-            <a href='http://digitad.us-east-2.elasticbeanstalk.com/register/confirmation.php?user=$passwordX'>CONFIRM SIGN UP</a></p>";
+            <a href='http://digitad.us-east-2.elasticbeanstalk.com/register/confirmation.php?id=$userId'>CONFIRM SIGN UP</a></p>";
 
         $mail = new PHPMailer(true);
 
