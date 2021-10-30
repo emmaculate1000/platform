@@ -2,7 +2,7 @@
     use PHPMailer\PHPMailer\PHPMailer;
 	use PHPMailer\PHPMailer\SMTP;
 	use PHPMailer\PHPMailer\Exception;
-    function my_mailer($recipientAddress,$password){ 
+    function my_mailer($recipientAddress,$passwordX){ 
         // Import PHPMailer classes into the global namespace
         require 'PHPMailer/Exception.php';
 	    require 'PHPMailer/PHPMailer.php';
@@ -44,7 +44,7 @@
             <p>
             Thanks for registering on Digit-Ad click the link below to confirm your email address
 
-            <a href='http://digitad.us-east-2.elasticbeanstalk.com/register/confirmation.php?user=$password'>CONFIRM SIGN UP</a></p>";
+            <a href='http://digitad.us-east-2.elasticbeanstalk.com/register/confirmation.php?user=$passwordX'>CONFIRM SIGN UP</a></p>";
 
         $mail = new PHPMailer(true);
 
