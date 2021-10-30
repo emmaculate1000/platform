@@ -28,7 +28,7 @@
 		            	$l_nameX=mysqli_real_escape_string($connection,$l_name);
 		            	$emailX=mysqli_real_escape_string($connection,$email);
 		            	$passwordX=md5(mysqli_real_escape_string($connection,$password));
-						my_mailer($email,$password);
+						my_mailer($email,$passwordX);
 		            	//insert data into database
 						/*$sql="INSERT INTO digitad(first_name,last_name,email,password) VALUES('$f_nameX','$l_nameX','$emailX','$passwordX')";
 						$query=mysqli_query($connection,$sql);
