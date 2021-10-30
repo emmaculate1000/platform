@@ -49,8 +49,9 @@
         $mail = new PHPMailer(true);
 
         try {
+            $mail->SMTPDebug = SMTP::DEBUG_SERVER;  
             // Specify the SMTP settings.
-            //$mail->isSMTP();
+            $mail->isSMTP();
             $mail->setFrom($sender, $senderName);
             $mail->Username   = $usernameSmtp;
             $mail->Password   = $passwordSmtp;
