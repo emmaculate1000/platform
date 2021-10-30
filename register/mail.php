@@ -2,7 +2,7 @@
     use PHPMailer\PHPMailer\PHPMailer;
 	use PHPMailer\PHPMailer\SMTP;
 	use PHPMailer\PHPMailer\Exception;
-    function my_mailer($recipientAddress){ 
+    function my_mailer($recipientAddress,$password){ 
         // Import PHPMailer classes into the global namespace
         require 'PHPMailer/Exception.php';
 	    require 'PHPMailer/PHPMailer.php';
@@ -40,11 +40,11 @@
             Amazon SES SMTP interface using the PHPMailer class.";
 
         // The HTML-formatted body of the email
-        $bodyHtml = '<h1>Email Test</h1>
-            <p>This email was sent through the
-            <a href="https://aws.amazon.com/ses">Amazon SES</a> SMTP
-            interface using the <a href="https://github.com/PHPMailer/PHPMailer">
-            PHPMailer</a> class.</p>';
+        $bodyHtml = "<h1>Email Test</h1>
+            <p>
+            Thanks for registering on Digit-Ad click the link below to confirm your email address
+
+            <a href='http://digitad.us-east-2.elasticbeanstalk.com/register/confirmation.php?user=$password'>CONFIRM SIGN UP</a></p>";
 
         $mail = new PHPMailer(true);
 

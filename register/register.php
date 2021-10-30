@@ -4,8 +4,7 @@
 	//include satization script
 	include('../dataCleaner.php');
 	//include config file
-	my_mailer("akemshow@gmail.com");
-	/*if($_SERVER['REQUEST_METHOD']=='POST'){
+	if($_SERVER['REQUEST_METHOD']=='POST'){
 		$configs=include('../config.php');
 		if(isset($_POST['purpose']) AND $_POST['purpose']=='registration'){
 			$f_name=cleaner($_POST['f_name']);
@@ -37,30 +36,8 @@
 							throw new Exception(mysqli_error($query));	
 						}
 						if($query){
-							//send user a mail
-		                   $mail=new PHPMailer\PHPMailer\PHPMailer();
-		                    //$mail->isSMTP();
-		                    $mail->Host='noreply@digitadooh.com';
-		                    $mail->Port=465;
-		                    $mail->SMTPAuth=true;
-		                    $mail->SMTPSecure='tls';
-		                    $mail->Username="AKIAVGKKEX76ZXS6Q24I";
-		                    $mail->Password="BPclDev9aF1tcl2MXzND2DxHrjzLY5ufgTjz/BIRAHi9";
-		                   	$mail->setFrom('noreply@digitadooh.com',"Digit-Ad");
-		                    $mail->addAddress('akemshow@gmail.com');
-		                    $mail->addReplyTo('noreply@digitadooh.com');
-		                    $mail->isHTML(true);
-		                    $mail->Subject="SIGN UP CONFIRMATION";
-		                    $mail->Body="<h1 style='text-align:center;'>
-		                    Click the link below to confirm your sign up and activate your account<br><br>
-		                    <a style='width:80%;margin:10px 10%;color:yellow;text-decoration:none;' href='https://www.victexgroup.com/digit-Ad/confirm_user.php?item=$passwordX'>
-		                    Click Here To Confirm Your Email Address</a>
-		                    </h1>";
-		                    if(!$mail->send()){
-		                        echo 0;
-		                    }else{
-		                        echo 1;
-		                    }
+							//send email
+							my_mailer($email,$password);
 						}
 		            }
 				}catch(Exception $e){
@@ -68,6 +45,6 @@
 				}
 			}
 		}
-	}*/
+	}
 	
 ?>
