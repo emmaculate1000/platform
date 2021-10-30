@@ -24,13 +24,13 @@
 
         // Specify a configuration set. If you do not want to use a configuration
         // set, comment or remove the next line.
-        $configurationSet = 'ConfigSet';
+       // $configurationSet = 'ConfigSet';
 
         // If you're using Amazon SES in a region other than US West (Oregon),
         // replace email-smtp.us-west-2.amazonaws.com with the Amazon SES SMTP
         // endpoint in the appropriate region.
         $host = 'email-smtp.us-east-2.amazonaws.com';
-        $port = 465;
+        $port = 587;
 
         // The subject line of the email
         $subject = 'Sign Up Comfirmation';
@@ -59,7 +59,7 @@
             $mail->Port       = $port;
             $mail->SMTPAuth   = true;
             $mail->SMTPSecure = 'tls';
-            $mail->addCustomHeader('X-SES-CONFIGURATION-SET', $configurationSet);
+            //$mail->addCustomHeader('X-SES-CONFIGURATION-SET', $configurationSet);
 
             // Specify the message recipients.
             $mail->addAddress($recipient);
