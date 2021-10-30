@@ -17,10 +17,10 @@
         $recipient = $recipientAddress;
 
         // Replace smtp_username with your Amazon SES SMTP user name.
-        $usernameSmtp = 'AKIAVGKKEX76ZXS6Q24I';
+        $usernameSmtp = 'AKIAVGKKEX76US4DREE7';
 
         // Replace smtp_password with your Amazon SES SMTP password.
-        $passwordSmtp = 'BPclDev9aF1tcl2MXzND2DxHrjzLY5ufgTjz/BIRAHi9';
+        $passwordSmtp = 'BDOhRQquu8AG4O7V9uC78uWvCROCqVPBE2GqVzJqxizv';
 
         // Specify a configuration set. If you do not want to use a configuration
         // set, comment or remove the next line.
