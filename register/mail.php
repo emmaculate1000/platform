@@ -9,7 +9,7 @@
 	    require 'PHPMailer/SMTP.php';
         // Replace sender@example.com with your "From" address.
         // This address must be verified with Amazon SES.
-        $sender = "noreply@digitadooh.com";
+        $sender = "no-reply@digitad-ooh.com";
         $senderName = "Digit-AD";
 
         // Replace recipient@example.com with a "To" address. If your account
@@ -50,7 +50,7 @@
         $mail = new PHPMailer(true);
 
         try {
-            //$mail->SMTPDebug = SMTP::DEBUG_SERVER;  
+            $mail->SMTPDebug = SMTP::DEBUG_SERVER;  
             // Specify the SMTP settings.
             $mail->isSMTP();
             $mail->setFrom($sender, $senderName);
