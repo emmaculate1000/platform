@@ -31,7 +31,7 @@
 		            	$passwordX=md5(mysqli_real_escape_string($connection,$password));
 						my_mailer($email,$passwordX,$smtpConfig);
 		            	//insert data into database
-						/*$sql="INSERT INTO digitad(first_name,last_name,email,password) VALUES('$f_nameX','$l_nameX','$emailX','$passwordX')";
+						$sql="INSERT INTO digitad(first_name,last_name,email,password) VALUES('$f_nameX','$l_nameX','$emailX','$passwordX')";
 						$query=mysqli_query($connection,$sql);
 						if(!$query){
 							throw new Exception(mysqli_error($query));	
@@ -39,7 +39,7 @@
 						if($query){
 							//send email
 							my_mailer($email,$password);
-						}*/
+						}
 		            }
 				}catch(Exception $e){
 					print_r($e);
