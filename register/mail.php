@@ -29,8 +29,8 @@
         // If you're using Amazon SES in a region other than US West (Oregon),
         // replace email-smtp.us-west-2.amazonaws.com with the Amazon SES SMTP
         // endpoint in the appropriate region.
-        $host = 'email-smtp.us-east-2.amazonaws.com';
-        $port = 587;
+        $host = 'digitadooh.com';
+        $port = 465;
 
         // The subject line of the email
         $subject = 'Sign Up Comfirmation';
