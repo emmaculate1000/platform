@@ -13,7 +13,7 @@
         "smtp_cred"=>[
             'username'=>'no-reply@digitad-ooh.com',
             'password'=>'technoboss1000@me',
-            'host'=>'smtp.google.com'
+            'host'=>'smtp.gmail.com'
         ]
     ]
 ?>
