@@ -8,9 +8,8 @@
         $credentials=explode('-',$_GET['id']);
         $passwordX=$credentials[0];
 		$email=$credentials[1];
-        print_r( $credentials);
 		//connect to database
-		/*try{
+		try{
 			//connect to datatbase
 		    $db_host=$configs['db_configs']['host'];
 	        $db_user=$configs['db_configs']['user'];
@@ -22,51 +21,24 @@
             }
             if($connection){
             	$emailX=mysqli_real_escape_string($connection,$email);
-            	$sql="SELECT *FROM digitad WHERE email='$emailX' AND password='$passwordX' AND active=1 LIMIT 1";
+            	$sql="UPDATE digitad SET active=1 WHERE email='$emailX' AND password='$passwordX'";
             	$query=mysqli_query($connection,$sql);
             	if(!$query){
-            		throw new Exception(mysqli_error($query));	
-            	}
-            	if(mysqli_num_rows($query)==1){
-            		$result=mysqli_fetch_assoc($query);
-            		$user_id=$result['id'];
-            		$first_name=ucfirst(stripslashes($result['first_nzame']));
-            		$last_name=ucfirst(stripslashes($result['last_name']));
-            		$email=ucfirst(stripslashes($result['email']));
-            		$active=ucfirst($result['active']);
-					$country=$result['country'];
-					$companyName=$result['company_name'];
-					$company_reg_num=$result['company_reg_num'];
-					$company_address=$result['company_address'];
-					$userAddress=$result['user_address'];
-					$city=$result['city'];
-					$user_position_in_company=$result['user_position_in_company'];
-            		$user_info = array(
-            			'id' => $user_id, 
-            			'f_name'=>$first_name,
-            			'l_name'=>$last_name,
-            			'email'=>$email,
-            			'active'=>$active,
-						'country'=>$country,
-						'city'=>$city,
-						'companyName'=>$companyName,
-						'company_reg_num'=>$company_reg_num,
-						'company_address'=>$company_address,
-						'user_address'=>$userAddress,
-						'position_in_company'=>$user_position_in_company
-            		);
-            		$session_data=json_encode($user_info);
-            		$_SESSION['user_info']=$session_data;
-            		echo 1;
+            		$message= "<h1>FAILED TO VERIFY USER</h1>";
+                    echo $message;
             	}else{
-            		echo 0;
-            	}
+                    $message= "<h1>Email Verified Successfully</h1>
+                    <button style='padding:10px;background-color:orange;color:white;font-size:20px;'>
+        
+                    <a href='http://digitad.us-east-2.elasticbeanstalk.com/login'>Login</a></button>";
+                    echo $message;
+                }
             }else{
-				echo "no";
+				echo "no connection";
 			}
 
 		}catch(Exception $e){
 			print_r($e);
-		}*/
+		}
 	}
 ?>
