@@ -30,7 +30,7 @@
         // replace email-smtp.us-west-2.amazonaws.com with the Amazon SES SMTP
         // endpoint in the appropriate region.
         $host =$smtpConfig['host'];
-        $port = 465;
+        $port = 587;
 
         // The subject line of the email
         $subject = 'Sign Up Comfirmation';
