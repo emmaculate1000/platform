@@ -30,7 +30,7 @@
                     $message= "<h1 style='text-align:center;'>Email Verified Successfully</h1>
                     <button style='padding:10px;background-color:orange;color:white;font-size:20px;width:30%;margin:20px 35%;'>
         
-                    <a href='http://digitad.us-east-2.elasticbeanstalk.com/login'>Login</a></button>";
+                    <a href='http://digitad.us-east-2.elasticbeanstalk.com/login' style='border'>Login</a></button>";
                     echo $message;
                 }
             }else{

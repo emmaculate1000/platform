@@ -10,11 +10,12 @@
         // Replace sender@example.com with your "From" address.
         // This address must be verified with Amazon SES.
         $sender = "noreply@digitadooh.com";
-        $senderName = "Digit-Ad";
+        $senderName = "Digit-AD";
 
         // Replace recipient@example.com with a "To" address. If your account
         // is still in the sandbox, this address must be verified.
         $recipient = $recipientAddress;
+        echo $recipientAddress;
 
         // Replace smtp_username with your Amazon SES SMTP user name.
         $usernameSmtp = 'AKIAVGKKEX76STNDFC6X';
