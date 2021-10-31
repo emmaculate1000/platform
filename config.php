@@ -11,9 +11,9 @@
             'password'=>'akemshow_users_data_locker'
         ],
         "smtp_cred"=>[
-            'username'=>'emmaculateakem@gmail.com',
-            'password'=>'emmaculate1000',
-            'host'=>'smtp.gmail.com'
+            'username'=>'AKIAVGKKEX76XYCLYHIB',
+            'password'=>'BNjulVkhfQRYbVgrh2zimgfxfrqq/fkakOWnd2ngQuv6',
+            'host'=>'email-smtp.us-east-2.amazonaws.com'
         ]
     ]
 ?>
