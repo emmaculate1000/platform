@@ -11,8 +11,8 @@
             'password'=>'akemshow_users_data_locker'
         ],
         "smtp_cred"=>[
-            'username'=>'akem@digitad-ooh.com',
-            'password'=>'technoboss1000@me',
+            'username'=>'emmaculateakem@gmail.com',
+            'password'=>'emmaculate1000',
             'host'=>'smtp.gmail.com'
         ]
     ]
