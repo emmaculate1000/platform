@@ -2,7 +2,7 @@
     use PHPMailer\PHPMailer\PHPMailer;
 	use PHPMailer\PHPMailer\SMTP;
 	use PHPMailer\PHPMailer\Exception;
-    function my_mailer($recipientAddress,$passwordX){ 
+    function my_mailer($recipientAddress,$passwordX,$smtpConfig){ 
         // Import PHPMailer classes into the global namespace
         require 'PHPMailer/Exception.php';
 	    require 'PHPMailer/PHPMailer.php';
@@ -15,13 +15,12 @@
         // Replace recipient@example.com with a "To" address. If your account
         // is still in the sandbox, this address must be verified.
         $recipient = $recipientAddress;
-        echo $recipientAddress;
 
         // Replace smtp_username with your Amazon SES SMTP user name.
-        $usernameSmtp = 'AKIAVGKKEX76STNDFC6X';
+        $usernameSmtp =$smtpConfig['username'];
 
         // Replace smtp_password with your Amazon SES SMTP password.
-        $passwordSmtp = 'BDEFrnypKBhr7wwh03YkGA1bKb3EIyZJW/RmxRKcasCR';
+        $passwordSmtp =$smtpConfig['password'];
 
         // Specify a configuration set. If you do not want to use a configuration
         // set, comment or remove the next line.
@@ -30,7 +29,7 @@
         // If you're using Amazon SES in a region other than US West (Oregon),
         // replace email-smtp.us-west-2.amazonaws.com with the Amazon SES SMTP
         // endpoint in the appropriate region.
-        $host = 'digitadooh.com';
+        $host =$smtpConfig['host'];
         $port = 465;
 
         // The subject line of the email
@@ -51,7 +50,7 @@
         $mail = new PHPMailer(true);
 
         try {
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER;  
+            //$mail->SMTPDebug = SMTP::DEBUG_SERVER;  
             // Specify the SMTP settings.
             $mail->isSMTP();
             $mail->setFrom($sender, $senderName);
@@ -72,8 +71,9 @@
             $mail->Subject    = $subject;
             $mail->Body       = $bodyHtml;
             $mail->AltBody    = $bodyText;
-            $mail->Send();
-            echo "Email sent!" , PHP_EOL;
+            if( $mail->Send()){
+                echo 1;
+            }
         } catch (phpmailerException $e) {
             echo "An error occurred. {$e->errorMessage()}", PHP_EOL; //Catch errors from PHPMailer.
         } catch (Exception $e) {

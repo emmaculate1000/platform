@@ -9,6 +9,11 @@
         "encryption_settings"=>[
             'method'=>'AES-192-ECB',
             'password'=>'akemshow_users_data_locker'
+        ],
+        "smtp_cred"=>[
+            'username'=>'AKIAVGKKEX76VGZPQTJ6',
+            'password'=>'BLccJgErq7yVtUz0jibQL3QVr6hwA+xFiJpcRDdUgaUp',
+            'host'=>'email-smtp.us-east-1.amazonaws.com'
         ]
     ]
 ?>

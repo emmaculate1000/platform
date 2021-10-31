@@ -19,6 +19,7 @@
 			        $db_user=$configs['db_configs']['user'];
 			        $db_password=$configs['db_configs']['password'];
 			        $db=$configs['db_configs']['users_db'];
+					$smtpConfig=$configs['smtp_cred'];
 			        $connection=mysqli_connect($db_host,$db_user,$db_password,$db);
 		            if(mysqli_connect_error()){
 		                throw new Exception(mysqli_connect_error());
@@ -28,7 +29,7 @@
 		            	$l_nameX=mysqli_real_escape_string($connection,$l_name);
 		            	$emailX=mysqli_real_escape_string($connection,$email);
 		            	$passwordX=md5(mysqli_real_escape_string($connection,$password));
-						my_mailer($email,$passwordX);
+						my_mailer($email,$passwordX,$smtpConfig);
 		            	//insert data into database
 						/*$sql="INSERT INTO digitad(first_name,last_name,email,password) VALUES('$f_nameX','$l_nameX','$emailX','$passwordX')";
 						$query=mysqli_query($connection,$sql);
