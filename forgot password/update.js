@@ -3,22 +3,24 @@ $(document).ready(function(){
 	$(".login100-form").submit(function(e){
 		e.preventDefault();
 		//get user info.
-		let email=$("#email").val();
-		if(email!==""&&password!==""){
+		let password=$("#password").val();
+		if(password!==""){
 			$.post(
-				'login.php',
+				'update.php',
 				{
-					"email": email,
+					"password":password,
 				},
 				function(data,status){
 					console.log(data);
 					if(status=='success'){
 						if(data==1){
-							//redirect to dashboard
-							window.location="http://digitad.us-east-2.elasticbeanstalk.com";
+                            $('.message2').show(100);
+							$('.login100-form').slideUp(7000,function(){
+                                window.location='http://digitad.us-east-2.elasticbeanstalk.com/login/'
+                            });
 						}else{
 							//clear input fields
-							$(".response").show(100).html("Invalid Email / Password")
+							$(".response").show(100).html("Invalid Email")
 							.fadeOut(10000);
 						}
 					}
