@@ -15,7 +15,7 @@
 	 	$campaignName=cleaner($campaignDetails->campaignName);
 	 	$campaignCapacity=$campaignDetails->campaignCapacity;
 	 	$campaignCountry=$campaignDetails->campaignCountry;
-	 	$campaignDate=json_encode($campaignDetails->campaignDate);
+	 	$campaignDate=date('d-m-Y');
 	 	$startDate=$campaignDetails->startDate;
 	 	$endDate=$campaignDetails->endDate;
 	 	$campaignDisplays=json_encode($campaignDetails->campaignDisplays);
