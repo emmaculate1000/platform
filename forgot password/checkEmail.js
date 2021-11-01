@@ -14,6 +14,7 @@ $(document).ready(function(){
 					console.log(data);
 					if(status=='success'){
 						if(data==1){
+                            $('.message2').show(100);
 							$('.login100-form').slideUp(7000);
 						}else{
 							//clear input fields
