@@ -9,9 +9,8 @@
         $credentials=explode('-',$userCredentials);
         $passwordX=$credentials[0];
 		$email=$credentials[1];
-		echo $email;
 		//connect to database
-		/*try{
+		try{
 			//connect to datatbase
 		    $db_host=$configs['db_configs']['host'];
 	        $db_user=$configs['db_configs']['user'];
@@ -23,17 +22,12 @@
             }
             if($connection){
             	$emailX=mysqli_real_escape_string($connection,$email);
-            	$sql="UPDATE digitad SET active=1 WHERE email='$emailX' AND password='$passwordX'";
+            	$sql="UPDATE digitad SET password='$passwordX' WHERE email='$emailX'";
             	$query=mysqli_query($connection,$sql);
             	if(!$query){
-            		$message= "<h1>FAILED TO VERIFY USER</h1>";
-                    echo $message;
+            		throw new Exception(mysqli_error($query));
             	}else{
-                    $message= "<h1 style='text-align:center;'>Email Verified Successfully</h1>
-                    <button style='padding:10px;background-color:orange;color:white;font-size:20px;width:30%;margin:20px 35%;'>
-        
-                    <a href='http://digitad.us-east-2.elasticbeanstalk.com/login' style='border'>Login</a></button>";
-                    echo $message;
+                   echo 1;
                 }
             }else{
 				echo "no connection";
@@ -41,6 +35,6 @@
 
 		}catch(Exception $e){
 			print_r($e);
-		}*/
+		}
 	}
 ?>
