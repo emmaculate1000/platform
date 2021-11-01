@@ -4,13 +4,11 @@ $(document).ready(function(){
 		e.preventDefault();
 		//get user info.
 		let email=$("#email").val();
-		let password=$("#password").val();
 		if(email!==""&&password!==""){
 			$.post(
 				'login.php',
 				{
 					"email": email,
-					"password":password,
 				},
 				function(data,status){
 					console.log(data);
