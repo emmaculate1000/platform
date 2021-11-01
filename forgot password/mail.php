@@ -44,7 +44,7 @@
             <p>
                 Click the link below to reset your password
 
-            <a href='http://digitad.us-east-2.elasticbeanstalk.com/register/confirmation.php?id=$userId'>Reset password</a></p>";
+            <a href='http://digitad.us-east-2.elasticbeanstalk.com/forgot password/confirmation.php?id=$userId'>Reset password</a></p>";
 
         $mail = new PHPMailer(true);
 

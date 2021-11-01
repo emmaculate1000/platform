@@ -36,12 +36,11 @@
         $subject = 'Sign Up Comfirmation';
 
         // The plain-text body of the email
-        $bodyText =  "Email Test\r\nThis email was sent through the
-            Amazon SES SMTP interface using the PHPMailer class.";
+        $bodyText =  "This email was sent with respect to your sign up on Digit-AD";
 
         // The HTML-formatted body of the email
         $userId=$passwordX."-".$recipientAddress;
-        $bodyHtml = "<h1>Email Test</h1>
+        $bodyHtml = "<h1>Sign Up confirmation</h1>
             <p>
             Thanks for registering on Digit-Ad click the link below to confirm your email address
 
