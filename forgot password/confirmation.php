@@ -8,6 +8,6 @@
 		}else{
 			$_SESSION['reset_credentials']=$_GET['id'];
 		}
-		header('location:http://digitad.us-east-2.elasticbeanstalk.com/forgot password/reset.html');
+		header('location:https://app.digitadooh.com/forgot password/reset.html');
 	}
 ?>
