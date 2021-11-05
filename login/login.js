@@ -17,7 +17,7 @@ $(document).ready(function(){
 					if(status=='success'){
 						if(data==1){
 							//redirect to dashboard
-							window.location="http://app.digitadooh.com";
+							window.location="app.digitadooh.com";
 						}else{
 							//clear input fields
 							$(".response").show(100).html("Invalid Email / Password")
