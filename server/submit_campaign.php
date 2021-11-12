@@ -56,7 +56,7 @@
 		global $campaignName,$campaignCountry,$campaignDate,
 		$startDate,$endDate,$campaignDisplays,$campaignCost,$mediaType,
 		$multiplyConstant,$numberOfDays,$numberOfScreens,
-		$campaignCapacity,$user_id,$username,$duration,$fSize,$errors;
+		$campaignCapacity,$user_id,$username,$duration,$fSize,$errors,$media_for_user;
 		$created=date("d-m-Y");
 		//database configs
 		$configs=include('config.php');
