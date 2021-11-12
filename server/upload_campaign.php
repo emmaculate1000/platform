@@ -1,6 +1,7 @@
 <?php
 	include('processing_functions.php');
 	include('upload_processor.php');
+	$errors=[];
 	if($_SERVER['REQUEST_METHOD']=='POST'){
 		$mediaType=$_POST['mediaType'];
 		if(isset($_FILES['file']['name'])){
