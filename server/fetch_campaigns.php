@@ -49,6 +49,7 @@
                             $user_name=$row['user_name'];
                             $duration=$row['duration'];
                             $fSize=$row['fsize'];
+                            $media_for_user=$row['media_for_user'];
                             $data=[
                                 'paid'=>$paid,
                                 'approved'=>$approved,
@@ -70,7 +71,8 @@
                                 'created'=>$created,
                                 'user_name'=>$user_name,
                                 'fSize'=>$fSize,
-                                'duration'=>$duration
+                                'duration'=>$duration,
+                                'media_for_user'=>$media_for_user
                             ];
                             array_push( $store,$data);
                         }

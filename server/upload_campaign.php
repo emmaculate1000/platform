@@ -11,7 +11,7 @@
 				//media is a video
 				$video=$_FILES['file'];
 				$video_name=$_FILES['file']['name'];
-				$video_folder="img/";
+				$video_folder="media/";
 				$media_file=video_uploader($video,$video_name,$video_folder);
 				$feedback=['file'=>$media_file,'success'=>1];
 				echo json_encode($feedback);
@@ -19,7 +19,7 @@
 				//media is an image 
 				$image=$_FILES['file'];
 				$image_name=$_FILES['file']['name'];
-				$image_folder="video/";//campaign_images
+				$image_folder="media/";//campaign_images
 				$media_file=uploader($image_name,$image,$image_folder);
 				imageRotator($media_file,$image_name,$image_folder);
 				$feedback=['file'=>$media_file,'success'=>1];

@@ -1,5 +1,4 @@
 <?php
-	header('Access-Control-Allow-Origin:http://localhost:8080');
 	header('Access-Control-Allow-Methods:GET,POST');
 	header('Access-Control-Allow-Headers:x-requested-with,Origin,Content-Type,X-Auth-Token,Authorization');
 	header('Access-Control-Allow-Credentials:true');
@@ -12,6 +11,7 @@
 	 	$campaignDetails=json_decode($_POST['data']);
 		$user_id=$_POST['user_id'];
 		$file=$_POST['file'];
+		$media_for_user=$_POST['media_for_user'];
 	 	$campaignName=cleaner($campaignDetails->campaignName);
 	 	$campaignCapacity=$campaignDetails->campaignCapacity;
 	 	$campaignCountry=$campaignDetails->campaignCountry;
@@ -75,9 +75,9 @@
 				$campaignNameX=mysqli_real_escape_string($connection,$campaignName);
 				//sql string
 				$sql="INSERT INTO digit_ad_campaign_store(user_id,user_name,campaign_name,country,start_date,end_date,created,displays,
-				media,duration,fsize,media_type,capacity,cost,numberOfScreens,numberOfDays,multiplyConstant,campaignDate) 
+				media,duration,fsize,media_type,capacity,cost,numberOfScreens,numberOfDays,multiplyConstant,campaignDate,media_for_user) 
 				VALUES($user_id,'$username','$campaignNameX','$campaignCountry','$startDate','$endDate','$created','$campaignDisplays','$file',$duration,$fSize,'$mediaType','$campaignCapacity',
-					$campaignCost,$numberOfScreens,$numberOfDays,$multiplyConstant,'$campaignDate')";
+					$campaignCost,$numberOfScreens,$numberOfDays,$multiplyConstant,'$campaignDate','$media_for_user')";
 				$result=mysqli_query($connection,$sql);
 				if($result){
 					echo 1;	
