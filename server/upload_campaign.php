@@ -1,5 +1,5 @@
 <?php
-	include('processing_funtions.php');
+	include('processing_functions.php');
 	include('upload_processor.php');
 	if($_SERVER['REQUEST_METHOD']=='POST'){
 		if(isset($_FILES['file']['name'])){
