@@ -11,9 +11,9 @@
             'password'=>'akemshow_users_data_locker'
         ],
         "smtp_cred"=>[
-            'username'=>'AKIAVGKKEX76XYCLYHIB',
-            'password'=>'BNjulVkhfQRYbVgrh2zimgfxfrqq/fkakOWnd2ngQuv6',
-            'host'=>'email-smtp.us-east-2.amazonaws.com'
+            'username'=>'noreply@digitadooh.tech',
+            'password'=>'emmaculateakemAstheBoss@Me',
+            'host'=>'wgh23.wghservers.com'
         ]
     ]
 ?>

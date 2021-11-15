@@ -30,15 +30,15 @@
 		            	$emailX=mysqli_real_escape_string($connection,$email);
 		            	$passwordX=md5(mysqli_real_escape_string($connection,$password));
 		            	//insert data into database
-						$sql="INSERT INTO digitad(first_name,last_name,email,password) VALUES('$f_nameX','$l_nameX','$emailX','$passwordX')";
-						$query=mysqli_query($connection,$sql);
-						if(!$query){
+						//$sql="INSERT INTO digitad(first_name,last_name,email,password) VALUES('$f_nameX','$l_nameX','$emailX','$passwordX')";
+						//$query=mysqli_query($connection,$sql);
+						/*if(!$query){
 							throw new Exception(mysqli_error($query));	
 						}
 						if($query){
-							//send email
+							//send email*/
 							my_mailer($email,$passwordX,$smtpConfig);
-						}
+						//}
 		            }
 				}catch(Exception $e){
 					print_r($e);
