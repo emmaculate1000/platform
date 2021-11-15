@@ -37,6 +37,7 @@
 						$usedBudget=$row['usedBudget'];
 						$expiredDate=$row['expiredDate'];
 						$expired=$row['expired'];
+						$img=$row['img'];
 						$screen_data=[
 							'country'=>$country,
 							'city'=>$city,
@@ -58,7 +59,8 @@
 							'usedBudget'=>$usedBudget,
 							'expiredDate'=>$expiredDate,
 							'numPlayedDays'=>$numPlayedDays,
-							'expired'=>$expired
+							'expired'=>$expired,
+							'img'=>$img
 						];
 						array_push($screens_info,$screen_data);
 					}
