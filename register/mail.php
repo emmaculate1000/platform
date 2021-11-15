@@ -44,7 +44,7 @@
             <p>
             Thanks for registering on Digit-Ad click the link below to confirm your email address
 
-            <a href='http://digitad.us-east-2.elasticbeanstalk.com/register/confirmation.php?id=$userId'>CONFIRM SIGN UP</a></p>";
+            <a href='https://app.digitadooh.com/register/confirmation.php?id=$userId'>CONFIRM SIGN UP</a></p>";
 
         $mail = new PHPMailer(true);
 
