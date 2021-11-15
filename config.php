@@ -13,7 +13,8 @@
         "smtp_cred"=>[
             'username'=>'noreply@digitadooh.tech',
             'password'=>'emmaculateakemAstheBoss@Me',
-            'host'=>'wgh23.wghservers.com'
+            'host'=>'wgh23.wghservers.com',
+            'git_token'=>'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'
         ]
     ]
 ?>

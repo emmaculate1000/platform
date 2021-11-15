@@ -63,7 +63,7 @@
 
             // Specify the message recipients.
             $mail->addAddress($recipient);
-            $img='app.digitadooh.com/register/images/img-01.jpg';
+            $img='app.digitadooh.com/register/images/icon.jpg';
             $mail->addEmbeddedImage($filename, $img);
             // You can also add CC, BCC, and additional To recipients here.
 
