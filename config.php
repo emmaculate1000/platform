@@ -14,7 +14,6 @@
             'username'=>'noreply@digitadooh.tech',
             'password'=>'emmaculateakemAstheBoss@Me',
             'host'=>'wgh23.wghservers.com',
-            'git_token'=>'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'
         ]
     ]
 ?>

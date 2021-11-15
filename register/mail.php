@@ -64,7 +64,9 @@
             // Specify the message recipients.
             $mail->addAddress($recipient);
             $img='images/icon.jpeg';
-            $mail->AddEmbeddedImage($img, 'DIGIT-AD',$img);
+            //$mail->AddEmbeddedImage($img, 'DIGIT-AD',$img);
+            $mail->addAttachment($img, 'DIGIT-AD');    //Optional name
+
             // You can also add CC, BCC, and additional To recipients here.
 
             // Specify the content of the message.
