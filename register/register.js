@@ -39,6 +39,8 @@ signUp.prototype.submitForm=function(){
 			if(data==1){
 				$(".validate-form").slideUp(6000);
 				$(".message2").show(100);
+			}else if(data==5){
+				alert('User with email exists');
 			}
 		}
 	})
