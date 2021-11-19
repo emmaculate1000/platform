@@ -53,6 +53,7 @@
 		
 	}
 	function db_store($file){
+		include('mail.php');
 		global $campaignName,$campaignCountry,$campaignDate,
 		$startDate,$endDate,$campaignDisplays,$campaignCost,$mediaType,
 		$multiplyConstant,$numberOfDays,$numberOfScreens,
@@ -64,6 +65,7 @@
         $db_user=$configs['db_configs']['user'];
         $db_password=$configs['db_configs']['password'];
         $db=$configs['db_configs']['users_db'];
+		$smtpConfig=$configs['smtp_cred'];
 		//connect to database
 		try{
 			$connection=mysqli_connect($db_host,$db_user,$db_password,$db);
@@ -80,7 +82,8 @@
 					$campaignCost,$numberOfScreens,$numberOfDays,$multiplyConstant,'$campaignDate','$media_for_user')";
 				$result=mysqli_query($connection,$sql);
 				if($result){
-					echo 1;	
+					//send email
+					my_mailer($email,$smtpConfig);
 				}else{
 					throw new Exception(mysqli_error($result));
 				}

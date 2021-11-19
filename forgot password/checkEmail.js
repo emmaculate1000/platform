@@ -15,8 +15,8 @@ $(document).ready(function(){
 					if(status=='success'){
 						if(data==1){
                             $('.message2').show(100);
-							$('.login100-form').slideUp(7000,function(){
-                                window.location='http://digitad.us-east-2.elasticbeanstalk.com/login/'
+							$('.login100-form').slideUp(12000,function(){
+                                window.location='https://app.digitadooh.com/login/'
                             });
 						}else{
 							//clear input fields
