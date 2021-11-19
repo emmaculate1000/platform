@@ -33,15 +33,14 @@
         $port = 587;
 
         // The subject line of the email
-        $subject = 'Password Reset:Digit-AD';
+        $subject = 'Successfully Launched Campaign:Digit-AD';
 
         // The plain-text body of the email
-        $bodyText =  "Thanks for creating a campaign on app.digitadooh.com. Your campaign has been received and is under review, Once approved we will notify you immediatelyb so that you can make payment thanks";
+        $bodyText =  "";
         $bodyHtml = "<h1>Campaign Received</h1>
-            <p>
-                SIGN IN TO VIEW CAMPAIGN
-
-            <a href='https://app.digitadooh.com/login'>Reset password</a></p>";
+            <p>           
+                Thanks for creating a campaign on app.digitadooh.com. Your campaign has been received and is under review, Once approved we will notify you immediatelyb so that you can make payment thanks
+            <a href='https://app.digitadooh.com/login'>SIGN IN TO VIEW CAMPAIGN</a></p>";
 
         $mail = new PHPMailer(true);
 
