@@ -10,6 +10,7 @@
 	if(isset($_POST['data'])){
 	 	$campaignDetails=json_decode($_POST['data']);
 		$user_id=$_POST['user_id'];
+		$email=$_POST['email'];
 		$file=$_POST['file'];
 		$media_for_user=$_POST['media_for_user'];
 	 	$campaignName=cleaner($campaignDetails->campaignName);
@@ -57,7 +58,7 @@
 		global $campaignName,$campaignCountry,$campaignDate,
 		$startDate,$endDate,$campaignDisplays,$campaignCost,$mediaType,
 		$multiplyConstant,$numberOfDays,$numberOfScreens,
-		$campaignCapacity,$user_id,$username,$duration,$fSize,$errors,$media_for_user;
+		$campaignCapacity,$user_id,$username,$duration,$fSize,$errors,$media_for_user,$email;
 		$created=date("d-m-Y");
 		//database configs
 		$configs=include('config.php');
