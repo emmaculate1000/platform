@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Digit-AD Payment :: Campaign Activation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="UI Card Payment template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons -->
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href="//fonts.googleapis.com/css?family=Lobster+Two:400,400i,700,700i" rel="stylesheet">
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'> 
+<!-- //web font -->
+</head>
+<body>
+	<!-- main -->
+	<div class="mainw3-agile">
+		<h1>Digit-AD Payment</h1>
+		<div class="main-agileinfo">
+			<div class="w3pay-left">
+				<div class="w3pay-left-text">
+					<img src="images/icon.jpeg" alt=""/>
+					<h2>Campaign Cost</h2>
+					<p>Your campaign will be deployed to selected screens after payment is completed</p>
+					<h3>XAF 10,000</h3> 
+				</div>	
+				<h6><a href="https://app.digitadooh.com"><i class="fa fa-angle-double-left" aria-hidden="true"></i> Cancel your payment</a></h6>
+			</div>	
+			<div class="w3pay-right wthree-pay-grid">
+				<div class="card-bounding agileits"> 
+					<input type="button" value="Pay Now" onclick='payWithZitopay()'> 
+				</div>
+			</div>	
+			<div class="clear">	</div>		
+		</div>	
+	</div>	
+	<!-- //main -->
+	<!-- Validator js -->  
+	<script src='https://zitopay.africa/assets/js/payment.js?v=0007'></script>
+<script>
+function payWithZitopay(){
+	var paymentSettings={
+		amount: '1000',
+		currency: 'XAF',
+		receiver: 'digitad',
+		currency: 'XAF',
+		onDone: function(response){
+			window.console&&console.log('Custom Transaction Reference:'+response.ref);
+			window.console&&console.log('Unverified Transaction Status:'+response.status);
+			window.console&&console.log('Payment Method:'+response.payment_method);
+
+			window.console&&console.log('Payment Method Label:'+response.payment_method_label);
+
+			//redirect to your page for server-side confirmation on docs,
+			//as described on https://zitopay.africa/docs#get-transaction
+
+			//window.location.href='http://mywebsite.com/my_confirmation_page?ref='+response.ref;
+		},
+		onClose: function(msg){
+			window.console&&console.log('Payment widget closed. '+msg);
+			////window.location.href='http://mywebsite.com/transaction_cancelation_page?ref='+response.ref;
+		}
+	}
+
+	var zitopayHandler = Zitopay.pay(paymentSettings);
+}
+</script>
+</body>
+</html>
