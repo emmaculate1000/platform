@@ -39,7 +39,7 @@
         $bodyText =  "";
         $bodyHtml = "<h1>Campaign Received</h1>
             <p>           
-                Thanks for creating a campaign on app.digitadooh.com. Your campaign has been received and is under review, Once approved we will notify you immediatelyb so that you can make payment thanks
+                You've successfully launched a campaign in Digit-AD , your campaign is being  reviewed thanks
             <a href='https://app.digitadooh.com/login'>SIGN IN TO VIEW CAMPAIGN</a></p>";
 
         $mail = new PHPMailer(true);

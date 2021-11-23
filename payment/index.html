@@ -40,33 +40,33 @@
 	<!-- //main -->
 	<!-- Validator js -->  
 	<script src='https://zitopay.africa/assets/js/payment.js?v=0007'></script>
-<script>
-function payWithZitopay(){
-	var paymentSettings={
-		amount: '1000',
-		currency: 'XAF',
-		receiver: 'digitad',
-		currency: 'XAF',
-		onDone: function(response){
-			window.console&&console.log('Custom Transaction Reference:'+response.ref);
-			window.console&&console.log('Unverified Transaction Status:'+response.status);
-			window.console&&console.log('Payment Method:'+response.payment_method);
-
-			window.console&&console.log('Payment Method Label:'+response.payment_method_label);
-
-			//redirect to your page for server-side confirmation on docs,
-			//as described on https://zitopay.africa/docs#get-transaction
-
-			//window.location.href='http://mywebsite.com/my_confirmation_page?ref='+response.ref;
-		},
-		onClose: function(msg){
-			window.console&&console.log('Payment widget closed. '+msg);
-			////window.location.href='http://mywebsite.com/transaction_cancelation_page?ref='+response.ref;
+	<script>
+	function payWithZitopay(){
+		var paymentSettings={
+			amount: '1000',
+			currency: 'XAF',
+			receiver: 'chanelskil',
+			currency: 'XAF',
+			onDone: function(response){
+				window.console&&console.log('Custom Transaction Reference:'+response.ref);
+				window.console&&console.log('Unverified Transaction Status:'+response.status);
+				window.console&&console.log('Payment Method:'+response.payment_method);
+	
+				window.console&&console.log('Payment Method Label:'+response.payment_method_label);
+	
+				//redirect to your page for server-side confirmation on docs,
+				//as described on https://zitopay.africa/docs#get-transaction
+	
+				//window.location.href='http://mywebsite.com/my_confirmation_page?ref='+response.ref;
+			},
+			onClose: function(msg){
+				window.console&&console.log('Payment widget closed. '+msg);
+				////window.location.href='http://mywebsite.com/transaction_cancelation_page?ref='+response.ref;
+			}
 		}
+	
+		var zitopayHandler = Zitopay.pay(paymentSettings);
 	}
-
-	var zitopayHandler = Zitopay.pay(paymentSettings);
-}
-</script>
+	</script>
 </body>
 </html>
