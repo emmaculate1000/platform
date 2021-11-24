@@ -57,7 +57,7 @@
             		$session_data=json_encode($user_info);
             		$_SESSION['user_info']=$session_data;
 					//check if user has a wallet and create it if it doesn't exist
-					$sql2="SELECT FROM wallets WHERE owner_id=$user_id";
+					$sql2="SELECT *FROM wallets WHERE owner_id=$user_id";
 					$result2=mysqli_query($connection,$sql2);
 					if(!$result2){
 						throw new Exception(mysqli_error($result2));	
