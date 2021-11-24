@@ -23,7 +23,24 @@
                     throw new Exception(mysqli_connect_error());
                 }
                 if($connection){
-                    echo "connected!";
+                    $sql="UPDATE wallets SET balance=$walletBalance,lastTopupAmount=$amount,lastTopupDate='$created',transactionReference='$reference',transactionMethod='$method' WHERE id=$walletId AND owner_id=$user_id";
+                    $result=mysqli_query($connection,$sql);
+                    if(!$result){
+                        throw new Exception(mysqli_error($result));   
+                    }else{
+                        //store transation
+                        $sql2="INSERT INTO transactions(user_id,email,reference,amount,method,dateOccurence) VALUES($user_id,'$email','$reference',$amount,'$method','$created')";
+                        $result2=mysqli_query($connection,$sql2);
+                        if(!$result2){
+                            throw new Exception(mysqli_error($result2));
+                            
+                        }else{
+                            //send email to client
+                            echo 1;
+                        }
+
+                    }
+                    mysqli_close($connection);
                 }
             }catch(Exception $e){
                 print_r($e);
