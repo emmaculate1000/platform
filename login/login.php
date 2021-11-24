@@ -69,7 +69,7 @@
 						}else{
 							//create a wallet for user
 							$sql3="INSERT INTO wallets(owner_id,owner_name,created) VALUES($user_id,'$email','$currentDate')";
-							$result3=mysqli_query($connection,$result3);
+							$result3=mysqli_query($connection,$sql3);
 							if(!$result3){
 								throw new Exception(mysqli_error($result3));
 							}else{
