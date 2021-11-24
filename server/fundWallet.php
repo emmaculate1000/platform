@@ -1,4 +1,5 @@
 <?php
+    include('walletFundMailer.php');
     if($_SERVER['REQUEST_METHOD']=='POST'){
         if(isset($_POST['reference'])){
             $reference=$_POST['reference'];
@@ -36,7 +37,7 @@
                             
                         }else{
                             //send email to client
-                            echo 1;
+                            my_mailer($email,$amount,$smtpConfig);
                         }
 
                     }
