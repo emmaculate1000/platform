@@ -56,7 +56,30 @@
             		);
             		$session_data=json_encode($user_info);
             		$_SESSION['user_info']=$session_data;
-            		echo 1;
+					//check if user has a wallet and create it if it doesn't exist
+					$sql2="SELECT FROM wallets WHERE owner_id=$user_id";
+					$result2=mysqli_query($connection,$sql2);
+					if(!$result2){
+						throw new Exception(mysqli_error($result2));	
+					}else{
+						$currentDate=date('d-m-Y');
+						if(mysqli_num_rows($result2)>0){
+							//wallet exists
+							echo 1;
+						}else{
+							//create a wallet for user
+							$sql3="INSERT INTO wallets(owner_id,owner_name,created) VALUES($user_id,'$email','$currentDate')";
+							$result3=mysqli_query($connection,$result3);
+							if(!$result3){
+								throw new Exception(mysqli_error($result3));
+							}else{
+								echo 1;
+							}
+						}
+					}
+					//close database connection
+					mysqli_close($connection);
+					
             	}else{
             		echo 0;
             	}
