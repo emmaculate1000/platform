@@ -6,6 +6,8 @@
             $amount=$_POST['amount'];
             $user_id=$_POST['user_id'];
             $email=$_POST['email'];
+            $walletBalance=$_POST['walletBalance'];
+            $walletId=$_POST['walletId'];
             $created=date("d-m-Y");
             //database configs
             $configs=include('config.php');
