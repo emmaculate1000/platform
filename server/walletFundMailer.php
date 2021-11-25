@@ -39,7 +39,7 @@
         $bodyText =  "";
         $bodyHtml = "<h1>WALLET SUCCESSFULLY FUNDED </h1>
             <p>           
-               This is to inform you that your  Digit-AD wallet was successfully funded with $amount, thanks for trusting Digit-AD!
+               This is to inform you that your  Digit-AD wallet was successfully funded with XAF $amount, thanks for trusting Digit-AD!
             <a href='https://app.digitadooh.com/login'>SIGN IN TO VIEW BALLANCE</a></p>";
 
         $mail = new PHPMailer(true);
