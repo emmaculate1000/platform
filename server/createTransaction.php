@@ -3,12 +3,9 @@
     if($_SERVER['REQUEST_METHOD']=='POST'){
         if(isset($_POST['reference'])){
             $reference=$_POST['reference'];
-            $method=$_POST['method'];
+            $operator=$_POST['operator'];
             $amount=$_POST['amount'];
             $user_id=$_POST['user_id'];
-            $email=$_POST['email'];
-            $walletBalance=$_POST['walletBalance'];
-            $walletId=$_POST['walletId'];
             $created=date("d-m-Y");
             //database configs
             $configs=include('config.php');
@@ -24,22 +21,14 @@
                     throw new Exception(mysqli_connect_error());
                 }
                 if($connection){
-                    $sql="UPDATE wallets SET balance=$walletBalance,lastTopupAmount=$amount,lastTopupDate='$created',transactionReference='$reference',transactionMethod='$method' WHERE id=$walletId AND owner_id=$user_id";
-                    $result=mysqli_query($connection,$sql);
-                    if(!$result){
-                        throw new Exception(mysqli_error($result));   
+                    //store transation
+                    $sql2="INSERT INTO transactions(user_id,reference,amount,dateOccurence,operator) VALUES($user_id,'$reference',$amount,'$created','$operator')";
+                    $result2=mysqli_query($connection,$sql2);
+                    if(!$result2){
+                        throw new Exception(mysqli_error($result2));
+                        
                     }else{
-                        //store transation
-                        $sql2="INSERT INTO transactions(user_id,email,reference,amount,method,dateOccurence) VALUES($user_id,'$email','$reference',$amount,'$method','$created')";
-                        $result2=mysqli_query($connection,$sql2);
-                        if(!$result2){
-                            throw new Exception(mysqli_error($result2));
-                            
-                        }else{
-                            //send email to client
-                            my_mailer($email,$amount,$smtpConfig);
-                        }
-
+                       echo 1;
                     }
                     mysqli_close($connection);
                 }
