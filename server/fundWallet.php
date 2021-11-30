@@ -7,6 +7,7 @@
             $amount=$_POST['amount'];
             $user_id=$_POST['user_id'];
             $email=$_POST['email'];
+            $status=$_POST['status'];
             $walletBalance=$_POST['walletBalance'];
             $walletId=$_POST['walletId'];
             $created=date("d-m-Y");
@@ -30,7 +31,7 @@
                         throw new Exception(mysqli_error($result));   
                     }else{
                         //store transation
-                        $sql2="INSERT INTO transactions(user_id,email,reference,amount,method,dateOccurence) VALUES($user_id,'$email','$reference',$amount,'$method','$created')";
+                        $sql2="UPDATE transactions SET email='$email',method='$method', status='$status' WHERE user_id=$user_id AND reference='$reference'";
                         $result2=mysqli_query($connection,$sql2);
                         if(!$result2){
                             throw new Exception(mysqli_error($result2));
