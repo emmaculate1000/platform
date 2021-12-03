@@ -7,6 +7,8 @@
             $coupon=$_POST['coupon'];
             if(array_key_exists($coupon,$coupons)){
                 echo 'sure';
+            }else{
+                echo "no";
             }
         }
     }
