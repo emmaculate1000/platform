@@ -1,6 +1,7 @@
 <?php
     $coupons=[
-        "kxy"=>10
+        "kxydhgtdp"=>10,
+        "jklfklfss"=>5,
     ];
     if($_SERVER['REQUEST_METHOD']=='POST'){
         if(isset($_POST['coupon'])){
