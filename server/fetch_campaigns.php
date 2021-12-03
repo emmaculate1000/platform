@@ -76,7 +76,8 @@
                             ];
                             array_push( $store,$data);
                         }
-                        echo json_encode($store);
+                        //echo json_encode($store);
+                        echo $displays;
                     }
                 }
             }catch(Exception $e){
