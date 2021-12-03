@@ -77,7 +77,7 @@
                             array_push( $store,$data);
                         }
                         //echo json_encode($store);
-                        echo $displays;
+                        echo json_encode($displays);
                     }
                 }
             }catch(Exception $e){
