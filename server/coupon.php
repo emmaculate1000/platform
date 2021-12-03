@@ -6,7 +6,8 @@
         if(isset($_POST['coupon'])){
             $coupon=$_POST['coupon'];
             if(array_key_exists($coupon,$coupons)){
-                echo 'sure';
+                $couponDiscount=$coupons[$coupon];
+                echo $couponDiscount;
             }else{
                 echo "no";
             }
