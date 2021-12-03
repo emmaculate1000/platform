@@ -2,18 +2,16 @@
     $coupons=[
         "kxy"=>10
     ];
-    echo 'ok';
-    if($_SERVER['REQUEST_METHOD']=='GET'){
-        echo 'yeah';
-        if(isset($_GET['coupon'])){
+    if($_SERVER['REQUEST_METHOD']=='POST'){
+        if(isset($_POST['coupon'])){
             echo 'yes';
-            $coupon=$_GET['coupon'];
+            $coupon=$_POST['coupon'];
             echo $coupon;
-            /*if(in_array($coupon,$coupons)){
-                echo 'yes';
+            if(in_array($coupon,$coupons)){
+                echo 'sure';
             }else{
                 echo 'no';
-            }*/
+            }
         }
     }
 ?>
