@@ -6,10 +6,18 @@
         if(isset($_POST['coupon'])){
             $coupon=$_POST['coupon'];
             if(array_key_exists($coupon,$coupons)){
-                $couponDiscount=$coupons[$coupon];
-                echo $couponDiscount;
+                $couponDiscount=intval($coupons[$coupon]);
+                $response=[
+                    'success'=>1,
+                    'discount'=>$couponDiscount
+                ];
+                echo json_encode($response);
             }else{
-                echo "no";
+                $response=[
+                    'success'=>0,
+                    'discount'=>0
+                ];
+                echo json_encode($response);
             }
         }
     }
