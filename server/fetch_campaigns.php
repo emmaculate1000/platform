@@ -77,7 +77,7 @@
                             array_push( $store,$data);
                         }
                         //echo json_encode($store);
-                        print_r($displays);
+                        print_r($row['displays']);
                     }
                 }
             }catch(Exception $e){
