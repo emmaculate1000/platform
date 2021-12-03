@@ -20,14 +20,16 @@
 					throw new Exception(mysqli_connect_error());
 				}
                 if($connection){
-                    $sql="SELECT *FROM digit_ad_campaign_store WHERE user_id= $user_id";
+                    //$sql="SELECT *FROM digit_ad_campaign_store WHERE user_id= $user_id";
+                    $sql="SELECT displays FROM digit_ad_campaign_store";
                     $result=mysqli_query($connection,$sql);
                     if(!$result){
                         throw new Exception(mysqli_error($result));   
                     }
                     if(mysqli_num_rows($result)>0){
                         $store=[];
-                        while($row=mysqli_fetch_assoc($result)){
+                        $row=mysqli_fetch_assoc($result);
+                       /* while($row=mysqli_fetch_assoc($result)){
                             $paid=$row['paid'];
                             $campaignName=$row['campaign_name'];
                             $campaignDate=json_decode($row['campaignDate']);
@@ -75,9 +77,8 @@
                                 'media_for_user'=>$media_for_user
                             ];
                             array_push( $store,$data);
-                        }
-                        //echo json_encode($store);
-                        print_r($row['displays']);
+                        }*/
+                        echo json_encode($row);
                     }
                 }
             }catch(Exception $e){
