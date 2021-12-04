@@ -20,8 +20,7 @@
 					throw new Exception(mysqli_connect_error());
 				}
                 if($connection){
-                    //$sql="SELECT *FROM digit_ad_campaign_store WHERE user_id= $user_id";
-                    $sql="SELECT displays FROM digit_ad_campaign_store";
+                    $sql="SELECT *FROM digit_ad_campaign_store WHERE user_id= $user_id";
                     $result=mysqli_query($connection,$sql);
                     if(!$result){
                         throw new Exception(mysqli_error($result));   
