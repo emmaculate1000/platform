@@ -28,8 +28,7 @@
                     }
                     if(mysqli_num_rows($result)>0){
                         $store=[];
-                        $row=mysqli_fetch_assoc($result);
-                       /* while($row=mysqli_fetch_assoc($result)){
+                        while($row=mysqli_fetch_assoc($result)){
                             $paid=$row['paid'];
                             $campaignName=$row['campaign_name'];
                             $campaignDate=json_decode($row['campaignDate']);
@@ -77,8 +76,8 @@
                                 'media_for_user'=>$media_for_user
                             ];
                             array_push( $store,$data);
-                        }*/
-                        echo json_encode($row);
+                        }
+                        echo json_encode($store);
                     }
                 }
             }catch(Exception $e){
