@@ -11,6 +11,7 @@
 			$l_name=cleaner($_POST['l_name']);
 			$email=cleaner($_POST['email']);
 			$password=cleaner($_POST['password']);
+			$created=date('d-m-Y');
 			if(!empty($f_name) and !empty($l_name)and !empty($email)and !empty($password))
 			{
 				try{
@@ -40,7 +41,7 @@
 							echo 5;
 						}else{
 							//register user
-							$sql="INSERT INTO digitad(first_name,last_name,email,password) VALUES('$f_nameX','$l_nameX','$emailX','$passwordX')";
+							$sql="INSERT INTO digitad(first_name,last_name,email,password,created) VALUES('$f_nameX','$l_nameX','$emailX','$passwordX','$created')";
 							$query=mysqli_query($connection,$sql);
 							if(!$query){
 								throw new Exception(mysqli_error($query));	

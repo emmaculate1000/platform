@@ -38,9 +38,15 @@
         // The plain-text body of the email
         $bodyText =  "";
         $bodyHtml = "<h1>WALLET SUCCESSFULLY FUNDED </h1>
-            <p>           
-               This is to inform you that your  Digit-AD wallet was successfully funded with XAF $amount, thanks for trusting Digit-AD!
-            <a href='https://app.digitadooh.com/login'>SIGN IN TO VIEW BALLANCE</a></p>";
+            <div style='width:100%;'>
+                <p>           
+                    This is to inform you that your  Digit-AD wallet was successfully funded with XAF $amount, thanks for trusting Digit-AD!
+                </p>
+                <div style='margin:20px 0px;width:100%;'>
+                    <a href='https://app.digitadooh.com/login' style='text-decoration:none;width:90%;margin:20px 5%;padding:10px;color:white;background-color:#e36f21'>OPEN DASHBOARD</a>
+                </div>
+            </div>
+           ";
 
         $mail = new PHPMailer(true);
 

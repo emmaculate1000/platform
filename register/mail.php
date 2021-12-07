@@ -41,10 +41,15 @@
         // The HTML-formatted body of the email
         $userId=$passwordX."-".$recipientAddress;
         $bodyHtml = "<h1>Sign Up confirmation</h1>
-            <p>
-            Thanks for registering on Digit-Ad click the link below to confirm your email address
-
-            <a href='https://app.digitadooh.com/register/confirmation.php?id=$userId'>CONFIRM SIGN UP</a></p>";
+            <div>
+                <p>
+                Thanks for registering on Digit-Ad click the link below to confirm your email address
+                </p>
+                <div style='margin:20px 0px;width:100%;'>
+                        <a href='https://app.digitadooh.com/register/confirmation.php?id=$userId' style='text-decoration:none;width:90%;margin:20px 5%;padding:10px;color:white;background-color:#e36f21'>CONFIRM EMAIL ADDRESS</a>
+                </div>
+            </div>
+            ";
 
         $mail = new PHPMailer(true);
 

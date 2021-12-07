@@ -38,9 +38,15 @@
         // The plain-text body of the email
         $bodyText =  "";
         $bodyHtml = "<h1>Campaign Received</h1>
-            <p>           
-                You've successfully launched a campaign in Digit-AD , your campaign is being  reviewed thanks
-            <a href='https://app.digitadooh.com/login'>SIGN IN TO VIEW CAMPAIGN</a></p>";
+            <div>
+                <p>           
+                    You've successfully launched a campaign in Digit-AD , your campaign is being  reviewed thanks
+                </p>
+                <div style='margin:20px 0px;width:100%;'>
+                    <a href='https://app.digitadooh.com/login' style='text-decoration:none;width:90%;margin:20px 5%;padding:10px;color:white;background-color:#e36f21'>OPEN DASHBOARD</a>
+                </div>
+            </div>
+            ";
 
         $mail = new PHPMailer(true);
 
