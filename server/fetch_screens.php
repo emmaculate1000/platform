@@ -38,6 +38,8 @@
 						$expiredDate=$row['expiredDate'];
 						$expired=$row['expired'];
 						$img=$row['img'];
+						$weekly_plan=$row['weekly_plan'];
+						$monthly_plan=$row['monthly_plan'];
 						$screen_data=[
 							'country'=>$country,
 							'city'=>$city,
@@ -60,7 +62,9 @@
 							'expiredDate'=>$expiredDate,
 							'numPlayedDays'=>$numPlayedDays,
 							'expired'=>$expired,
-							'img'=>$img
+							'img'=>$img,
+							'weekly_plan'=>$weekly_plan,
+							'monthly_plan'=>$monthly_plan
 						];
 						array_push($screens_info,$screen_data);
 					}
