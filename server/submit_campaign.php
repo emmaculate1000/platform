@@ -26,8 +26,9 @@
 	 	$multiplyConstant=$campaignDetails->multiplyConstant;
 	 	$numberOfDays=$campaignDetails->numberOfDays;
 	 	$numberOfScreens=$campaignDetails->numberOfScreens;
-		 $duration=$campaignDetails->duration;
-		 $fSize=$campaignDetails->fSize;
+		$duration=$campaignDetails->duration;
+		$fSize=$campaignDetails->fSize;
+		$premium=$campaignDetails->premium;
 		$username=$_POST['user_name'];
 		db_store($file);
 		/*if(isset($_FILES['file']['name'])){
