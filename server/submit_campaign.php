@@ -28,7 +28,8 @@
 	 	$numberOfScreens=$campaignDetails->numberOfScreens;
 		$duration=$campaignDetails->duration;
 		$fSize=$campaignDetails->fSize;
-		$premium=$campaignDetails->premium;
+		$premium=$campaignDetails->premium==true?1:0;
+		$premiumData=json_encode($campaignDetails->premium_data);
 		$username=$_POST['user_name'];
 		db_store($file);
 		/*if(isset($_FILES['file']['name'])){
@@ -59,7 +60,8 @@
 		global $campaignName,$campaignCountry,$campaignDate,
 		$startDate,$endDate,$campaignDisplays,$campaignCost,$mediaType,
 		$multiplyConstant,$numberOfDays,$numberOfScreens,
-		$campaignCapacity,$user_id,$username,$duration,$fSize,$errors,$media_for_user,$email;
+		$campaignCapacity,$user_id,$username,$duration,$fSize,$errors,
+		$media_for_user,$email,$premium,$premiumData;
 		$created=date("d-m-Y");
 		//database configs
 		$configs=include('config.php');
@@ -79,9 +81,9 @@
 				$campaignNameX=mysqli_real_escape_string($connection,$campaignName);
 				//sql string
 				$sql="INSERT INTO digit_ad_campaign_store(user_id,user_name,email,campaign_name,country,start_date,end_date,created,displays,
-				media,duration,fsize,media_type,capacity,cost,numberOfScreens,numberOfDays,multiplyConstant,campaignDate,media_for_user) 
+				media,duration,fsize,media_type,capacity,cost,numberOfScreens,numberOfDays,multiplyConstant,campaignDate,media_for_user,premium,premiumData) 
 				VALUES($user_id,'$username','$email','$campaignNameX','$campaignCountry','$startDate','$endDate','$created','$campaignDisplays','$file',$duration,$fSize,'$mediaType','$campaignCapacity',
-					$campaignCost,$numberOfScreens,$numberOfDays,$multiplyConstant,'$campaignDate','$media_for_user')";
+					$campaignCost,$numberOfScreens,$numberOfDays,$multiplyConstant,'$campaignDate','$media_for_user',$premium,'$premiumData')";
 				$result=mysqli_query($connection,$sql);
 				if($result){
 					//send email

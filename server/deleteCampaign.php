@@ -32,6 +32,8 @@
 		$fSize=$campaignDetails->fSize;
 		$premium=$campaignDetails->premium;
 		$username=$campaignDetails->user_name;
+		$premium=$campaignDetails->premium==true?1:0;
+		$premiumData=json_encode($campaignDetails->premium_data);
         /////////////////
         delete_item();
      }
@@ -67,7 +69,7 @@
 		$multiplyConstant,$numberOfDays,$numberOfScreens,
 		$campaignCapacity,$user_id,$username,$duration,$fSize,
         $errors,$media_for_user,$email,$configs,$db_host,$db_user,$db_password,
-        $db,$smtpConfig,$file,$premium;
+        $db,$smtpConfig,$file,$premium,$premiumData;;
 		$created=date("d-m-Y");
 		//connect to database
 		try{
@@ -80,9 +82,9 @@
 				$campaignNameX=mysqli_real_escape_string($connection,$campaignName);
 				//sql string
 				$sql="INSERT INTO history(user_id,user_name,email,campaign_name,country,start_date,end_date,created,displays,
-				media,duration,fsize,media_type,capacity,cost,numberOfScreens,numberOfDays,multiplyConstant,campaignDate,media_for_user) 
+				media,duration,fsize,media_type,capacity,cost,numberOfScreens,numberOfDays,multiplyConstant,campaignDate,media_for_user,premium,premiumData) 
 				VALUES($user_id,'$username','$email','$campaignNameX','$campaignCountry','$startDate','$endDate','$created','$campaignDisplays','$file',$duration,$fSize,'$mediaType','$campaignCapacity',
-					$campaignCost,$numberOfScreens,$numberOfDays,$multiplyConstant,'$campaignDate','$media_for_user')";
+					$campaignCost,$numberOfScreens,$numberOfDays,$multiplyConstant,'$campaignDate','$media_for_user',$premium,'$premiumData')";
 				$result=mysqli_query($connection,$sql);
 				if($result){
 					//send email

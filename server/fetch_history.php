@@ -51,6 +51,8 @@
                             $fSize=$row['fsize'];
                             $media_for_user=$row['media_for_user'];
                             $email=$row['email'];
+                            $premium=$row['premium'];
+                            $premiumData=json_decode($row['premiumData']);
                             $data=[
                                 'paid'=>$paid,
                                 'approved'=>$approved,
@@ -74,7 +76,9 @@
                                 'fSize'=>$fSize,
                                 'duration'=>$duration,
                                 'media_for_user'=>$media_for_user,
-                                'email'=>$email
+                                'email'=>$email,
+                                'premium'=>$premium,
+                                'premiumData'=>$premiumData
                             ];
                             array_push( $store,$data);
                         }
