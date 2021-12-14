@@ -20,7 +20,7 @@
 					throw new Exception(mysqli_connect_error());
 				}
                 if($connection){
-                    $sql="SELECT *FROM history WHERE user_id= $user_id";
+                    $sql="SELECT *FROM history WHERE user_id= $user_id DESC LIMIT 50";
                     $result=mysqli_query($connection,$sql);
                     if(!$result){
                         throw new Exception(mysqli_error($result));   

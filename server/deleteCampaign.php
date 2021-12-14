@@ -33,7 +33,7 @@
 		$premium=$campaignDetails->premium;
 		$username=$campaignDetails->user_name;
 		$premium=$campaignDetails->premium==true?1:0;
-		$premiumData=json_encode($campaignDetails->premium_data);
+		$premiumData=json_encode($campaignDetails->premiumData);
         /////////////////
         delete_item();
      }
