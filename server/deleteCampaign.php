@@ -13,7 +13,7 @@
 	 	$campaignId=$campaignDetails->id;
         ////////////////////
 		$email=$campaignDetails->email;
-		$file=$campaignDetails->media;
+		$file=$campaignDetails->campaignMedia;
 		$media_for_user=$campaignDetails->media_for_user;
 	 	$campaignName=$campaignDetails->campaignName;
 	 	$campaignCapacity=$campaignDetails->campaignCapacity;
@@ -67,7 +67,7 @@
 		$multiplyConstant,$numberOfDays,$numberOfScreens,
 		$campaignCapacity,$user_id,$username,$duration,$fSize,
         $errors,$media_for_user,$email,$configs,$db_host,$db_user,$db_password,
-        $db,$smtpConfig;
+        $db,$smtpConfig,$file,$premium;
 		$created=date("d-m-Y");
 		//connect to database
 		try{
