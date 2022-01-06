@@ -40,6 +40,7 @@
 						$img=$row['img'];
 						$weekly_plan=$row['weekly_plan'];
 						$monthly_plan=$row['monthly_plan'];
+						$ownerEmail=$row['owner_email'];
 						$screen_data=[
 							'country'=>$country,
 							'city'=>$city,
@@ -64,7 +65,8 @@
 							'expired'=>$expired,
 							'img'=>$img,
 							'weekly_plan'=>$weekly_plan,
-							'monthly_plan'=>$monthly_plan
+							'monthly_plan'=>$monthly_plan,
+							'owner_email'=>$ownerEmail
 						];
 						array_push($screens_info,$screen_data);
 					}
