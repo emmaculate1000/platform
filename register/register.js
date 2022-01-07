@@ -10,7 +10,7 @@ function signUp(f_name,l_name,email,password1,password2,phone,country){
 }
 //method to valide data
 signUp.prototype.validateData=function(){
-	if(this.f_name!==""&&this.email!==""&&this.l_name!==""&&this.password1!==""&&this.password2!==""&&this.phone==""&&this.country=="")
+	if(this.f_name!==""&&this.email!==""&&this.l_name!==""&&this.password1!==""&&this.password2!==""&&this.phone!==""&&this.country!=="")
 	{
 		return 1;
 	}else{
