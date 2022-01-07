@@ -11,8 +11,10 @@
 			$l_name=cleaner($_POST['l_name']);
 			$email=cleaner($_POST['email']);
 			$password=cleaner($_POST['password']);
+			$country=cleaner($_POST['country']);
+			$phone=cleaner($_POST['phone']);
 			$created=date('d-m-Y');
-			if(!empty($f_name) and !empty($l_name)and !empty($email)and !empty($password))
+			if(!empty($f_name) and !empty($l_name)and !empty($email)and !empty($password) and !empty($phone) and !empty($country))
 			{
 				try{
 					//connect to datatbase
@@ -29,6 +31,8 @@
 		            	$f_nameX=mysqli_real_escape_string($connection,$f_name);
 		            	$l_nameX=mysqli_real_escape_string($connection,$l_name);
 		            	$emailX=mysqli_real_escape_string($connection,$email);
+						$countryX=mysqli_real_escape_string($connection,$country);
+						$phoneX=mysqli_real_escape_string($connection,$phone);
 		            	$passwordX=md5(mysqli_real_escape_string($connection,$password));
 						//check if email already exists
 						$sqlCheck="SELECT *FROM digitad WHERE email='$emailX' AND password='$passwordX'";
@@ -41,7 +45,7 @@
 							echo 5;
 						}else{
 							//register user
-							$sql="INSERT INTO digitad(first_name,last_name,email,password,created) VALUES('$f_nameX','$l_nameX','$emailX','$passwordX','$created')";
+							$sql="INSERT INTO digitad(first_name,last_name,email,phone,country,password,created) VALUES('$f_nameX','$l_nameX','$emailX','$phoneX','$countryX','$passwordX','$created')";
 							$query=mysqli_query($connection,$sql);
 							if(!$query){
 								throw new Exception(mysqli_error($query));	

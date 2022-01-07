@@ -1,14 +1,16 @@
 //sign up constructor
-function signUp(f_name,l_name,email,password1,password2){
+function signUp(f_name,l_name,email,password1,password2,phone,country){
 	this.f_name=f_name;
 	this.l_name=l_name;
 	this.email=email;
 	this.password1=password1;
 	this.password2=password2;
+	this.phone=phone,
+	this.country=country
 }
 //method to valide data
 signUp.prototype.validateData=function(){
-	if(this.f_name!==""&&this.email!==""&&this.l_name!==""&&this.password1!==""&&this.password2!=="")
+	if(this.f_name!==""&&this.email!==""&&this.l_name!==""&&this.password1!==""&&this.password2!==""&&this.phone==""&&this.country=="")
 	{
 		return 1;
 	}else{
@@ -32,7 +34,9 @@ signUp.prototype.submitForm=function(){
 			f_name:this.f_name,
 			l_name:this.l_name,
 			email:this.email,
-			password:this.password2
+			password:this.password2,
+			phone:this.phone,
+			country:this.country
 		},
 		success:function(data){
 			console.log(data);
@@ -53,7 +57,9 @@ $(".validate-form").submit(function(e){
 	let email=$("#email").val();
 	let password1=$("#password-1").val();
 	let password2=$("#password-2").val();
-	let signUp_Obj=new signUp(fname,lname,email,password1,password2);
+	let phone=$("#phone").val();
+	let country=$("#country").val();
+	let signUp_Obj=new signUp(fname,lname,email,password1,password2,phone,country);
 	if(signUp_Obj.validateData()){
 		if(signUp_Obj.passwordCheck()){
 			signUp_Obj.submitForm();
