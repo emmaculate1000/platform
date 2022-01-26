@@ -40,7 +40,7 @@
         $bodyHtml = "<h1>WALLET SUCCESSFULLY FUNDED </h1>
             <div style='width:100%;'>
                 <p>           
-                    This is to inform you that your  Digit-AD wallet was successfully funded with XAF $amount, thanks for trusting Digit-AD!
+                    This is to inform you that your  Digit-AD wallet was successfully funded with XAF $amount. You have also received a bonus of 10,000 fcfa thanks for trusting Digit-AD!
                 </p>
                 <div style='margin:20px 0px;width:100%;'>
                     <a href='https://app.digitadooh.com/login' style='text-decoration:none;width:90%;margin:20px 5%;padding:10px;color:white;background-color:#e36f21'>OPEN DASHBOARD</a>
