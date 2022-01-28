@@ -52,6 +52,7 @@
                             $media_for_user=$row['media_for_user'];
                             $email=$row['email'];
                             $premium=$row['premium'];
+                            $expired=$row['expired'];
                             $premiumData=json_decode($row['premiumData']);
                             $data=[
                                 'paid'=>$paid,
@@ -78,7 +79,8 @@
                                 'media_for_user'=>$media_for_user,
                                 'email'=>$email,
                                 'premium'=>$premium,
-                                'premiumData'=>$premiumData
+                                'premiumData'=>$premiumData,
+                                'expired'=>$expired
                             ];
                             array_push( $store,$data);
                         }
