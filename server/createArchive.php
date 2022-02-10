@@ -22,7 +22,7 @@
 		 $fSize=$campaignDetails->fSize;
 		 $deactivation=deactivate_campaign();
 		 if($deactivation==1){
-			db_store($campaignMedia);
+			db_store();
 		 }
      }
      function db_store(){
