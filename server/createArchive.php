@@ -3,6 +3,7 @@
         $campaignDetails=json_decode($_POST['data']);
 		$user_id=$_POST['user_id'];
 		$campaign_id=$campaignDetails->id;
+		$userMedia=$campaignDetails->media_for_user;
 	 	$campaignName=$campaignDetails->campaignName;
 	 	$campaignCapacity=$campaignDetails->campaignCapacity;
 	 	$campaignCountry=$campaignDetails->campaignCountry;
@@ -29,7 +30,7 @@
 		global $campaignName,$campaignCountry,$campaignDate,$campaign_id,
 		$startDate,$endDate,$campaignDisplays,$campaignCost,$mediaType,
 		$multiplyConstant,$numberOfDays,$numberOfScreens,
-		$user_id, $created,$username,$duration,$fSize,$campaignMedia;
+		$user_id, $created,$username,$duration,$fSize,$campaignMedia,$userMedia;
 		//database configs
 		$configs=include('config.php');
 		$db_host=$configs['db_configs']['host'];
@@ -46,8 +47,8 @@
 				$campaignNameX=mysqli_real_escape_string($connection,$campaignName);
 				//sql string
 				$sql="INSERT INTO archived_campaigns(campaign_id,user_id,user_name,campaign_name,country,start_date,end_date,created,displays,
-				media,duration,fsize,media_type,cost,numberOfScreens,numberOfDays,multiplyConstant,campaignDate,approved,paid) 
-				VALUES($campaign_id,$user_id,'$username','$campaignNameX','$campaignCountry','$startDate','$endDate','$created','$campaignDisplays','$campaignMedia',$duration,$fSize,'$mediaType',
+				media,media_for_user,duration,fsize,media_type,cost,numberOfScreens,numberOfDays,multiplyConstant,campaignDate,approved,paid) 
+				VALUES($campaign_id,$user_id,'$username','$campaignNameX','$campaignCountry','$startDate','$endDate','$created','$campaignDisplays','$campaignMedia','$userMedia',$duration,$fSize,'$mediaType',
 					$campaignCost,$numberOfScreens,$numberOfDays,$multiplyConstant,'$campaignDate',0,0)";
 				$result=mysqli_query($connection,$sql);
 				if($result){
