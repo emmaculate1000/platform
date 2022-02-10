@@ -25,11 +25,11 @@
 			db_store($campaignMedia);
 		 }
      }
-     function db_store($file){
+     function db_store(){
 		global $campaignName,$campaignCountry,$campaignDate,$campaign_id,
 		$startDate,$endDate,$campaignDisplays,$campaignCost,$mediaType,
 		$multiplyConstant,$numberOfDays,$numberOfScreens,$campaignCapacity,
-		$user_id, $created,$username,$duration,$fSize;
+		$user_id, $created,$username,$duration,$fSize,$campaignMedia;
 		//database configs
 		$configs=include('config.php');
 		$db_host=$configs['db_configs']['host'];
@@ -45,10 +45,10 @@
 				//escape string
 				$campaignNameX=mysqli_real_escape_string($connection,$campaignName);
 				//sql string
-				$sql="INSERT INTO archived_campaigns(user_id,campaign_id,user_name,campaign_name,country,start_date,end_date,created,displays,
+				$sql="INSERT INTO archived_campaigns(campaign_id,user_id,user_name,campaign_name,country,start_date,end_date,created,displays,
 				media,duration,fsize,media_type,capacity,cost,numberOfScreens,numberOfDays,multiplyConstant,campaignDate,approved,paid) 
-				VALUES($user_id,$campaign_id,'$username','$campaignNameX','$campaignCountry','$startDate','$endDate','$created','$campaignDisplays','$file',$duration,$fSize,'$mediaType','$campaignCapacity',
-					$campaignCost,$numberOfScreens,$numberOfDays,$multiplyConstant,'$campaignDate',1,1)";
+				VALUES($campaign_id,$user_id,'$username','$campaignNameX','$campaignCountry','$startDate','$endDate','$created','$campaignDisplays','$campaignMedia',$duration,$fSize,'$mediaType','$campaignCapacity',
+					$campaignCost,$numberOfScreens,$numberOfDays,$multiplyConstant,'$campaignDate',0,0)";
 				$result=mysqli_query($connection,$sql);
 				if($result){
 					echo 1;	
