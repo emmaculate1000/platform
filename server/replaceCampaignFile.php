@@ -7,7 +7,7 @@
 	$errors=[];
 	//file containing processing functions
     //include("processing_functions.php");
-	if(isset($_POST['data'])){
+	if(isset($_POST['media_for_user'])){
 		$user_id=$_POST['user_id'];
 		$file=$_POST['file'];
         $campaignId=$_POST['campaignId'];
