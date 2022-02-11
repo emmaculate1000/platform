@@ -8,14 +8,13 @@
 	//file containing processing functions
     //include("processing_functions.php");
 	if(isset($_POST['data'])){
-	 	$campaignDetails=json_decode($_POST['data']);
 		$user_id=$_POST['user_id'];
 		$file=$_POST['file'];
         $campaignId=$_POST['campaignId'];
 		$media_for_user=$_POST['media_for_user'];
-		db_store($file);
+		db_store();
 	}
-	function db_store($file){
+	function db_store(){
 		include('mail.php');
 		global $errors,$media_for_user,$campaignId,$file;
 		$created=date("d-m-Y");
