@@ -13,6 +13,7 @@
 	 	$campaignCost=$campaignDetails->campaignCost;
 	 	$mediaType=$campaignDetails->mediaType;
 	 	$multiplyConstant=$campaignDetails->multiplyConstant;
+		$media_for_user=$campaignDetails->media_for_user;
 	 	$numberOfDays=$campaignDetails->numberOfDays;
 	 	$numberOfScreens=$campaignDetails->numberOfScreens;
 		 $created=$campaignDetails->created;
@@ -29,7 +30,7 @@
      function db_store($file){
 		global $campaignName,$campaignCountry,$campaignDate,
 		$startDate,$endDate,$campaignDisplays,$campaignCost,$mediaType,
-		$multiplyConstant,$numberOfDays,$numberOfScreens,$campaignCapacity,$user_id, $created,$username;
+		$multiplyConstant,$numberOfDays,$numberOfScreens,$campaignCapacity,$user_id, $created,$username,$media_for_user;
 		//database configs
 		$configs=include('config.php');
 		$db_host=$configs['db_configs']['host'];
@@ -47,9 +48,9 @@
 				$campaignNameX=mysqli_real_escape_string($connection,$campaignName);
 				//sql string
 				$sql="INSERT INTO digit_ad_campaign_store(user_id,user_name,campaign_name,country,start_date,end_date,created,displays,
-				media,media_type,capacity,cost,numberOfScreens,numberOfDays,multiplyConstant,campaignDate,approved,paid) 
+				media,media_type,capacity,cost,numberOfScreens,numberOfDays,multiplyConstant,campaignDate,approved,paid,media_for_user) 
 				VALUES($user_id,'$username','$campaignNameX','$campaignCountry','$startDate','$endDate','$created','$campaignDisplays','$file','$mediaType','$campaignCapacity',
-					$campaignCost,$numberOfScreens,$numberOfDays,$multiplyConstant,'$campaignDate',1,0)";
+					$campaignCost,$numberOfScreens,$numberOfDays,$multiplyConstant,'$campaignDate',0,0,'$media_for_user')";
 				$result=mysqli_query($connection,$sql);
 				if($result){
 					echo 1;	
