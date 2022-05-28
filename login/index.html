@@ -20,6 +20,28 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
+<style>
+	.sign-btn{
+		background:#ccc;
+		padding:0.8rem 0.8rem;
+		border-radius:0.3rem;
+	}
+	.sign-btn i{
+		margin:0 0.4rem;
+	}
+	.social_note{
+		margin:1rem 0;
+	}
+	.bottom_item{
+		margin:1rem 0;
+	}
+	.btn_member{
+		background:#ccc;
+		padding:0.8rem 0.8rem;
+		border-radius:0.3rem;
+		width:100%;
+	}
+</style>
 </head>
 <body>
 	
@@ -62,11 +84,11 @@
 					<p class="social_note bottom_item">Sign in with Google or Facebook below</p>
 					<div class="text-center bottom_item">
 						<button class="sign-btn">Facebook<i class="fa fa-facebook"></i></button>
-						<button class="sign-btn">Google<i class="fa fa-google"></i></button>
+						<button class="sign-btn"><div class="g-signin2" data-onsuccess="onSignIn"></div></button>
 						<div class="g-signin2" data-onsuccess="onSignIn"></div>
 					</div>
 					<div class="text-center bottom_item">
-						<a class="txt2" href="https://app.digitad-ooh.com/register">
+						<a class="txt2" href="https://app.digitadooh.com/register">
 							<button class="btn_member">
 								Not A Member? Create Account
 							</button>
@@ -76,7 +98,7 @@
 						<span class="txt1">
 							Forgot
 						</span>
-						<a class="txt2" href="../forgot password/">
+						<a class="txt2" href="https://app.digitadooh.com/forgot password/">
 							Password?
 						</a>
 					</div>
