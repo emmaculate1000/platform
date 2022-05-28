@@ -1,4 +1,5 @@
 <?php
+//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
     return [
         "db_configs"=>[
             'host'=>'digitadusersdb.cx0dfxutvhub.us-east-2.rds.amazonaws.com',
@@ -9,7 +10,7 @@
         "encryption_settings"=>[
             'method'=>'AES-192-ECB',
             'password'=>'akemshow_users_data_locker',
-            'git_token'=>"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"
+            'git_token'=>""
         ],
         "smtp_cred"=>[
             'username'=>'noreply@digitadooh.tech',
