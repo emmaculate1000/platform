@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 	<title>DIGIT-AD::SIGN UP</title>
+	<meta name="google-signin-client_id" content="721508109113-jphc8019ri6cdlqt6ctljt2n65jlt1gu.apps.googleusercontent.com.apps.googleusercontent.com">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="google-signin-client_id" content="721508109113-jphc8019ri6cdlqt6ctljt2n65jlt1gu.apps.googleusercontent.com.apps.googleusercontent.com">
 <!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="images/icon.jpeg"/>
 <!--===============================================================================================-->
@@ -43,7 +43,7 @@
 		width:100%;
 	}
 </style>
-
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body>
 	
@@ -123,14 +123,12 @@
 					<p class="social_note bottom_item">Sign up with Google or Facebook below</p>
 					<div class="text-center bottom_item">
 						<button class="sign-btn">Facebook<i class="fa fa-facebook"></i></button>
-						<button class="sign-btn"><div class="g-signin2" data-onsuccess="onSignIn"></div></button>
+						<div class="g-signin2" data-onsuccess="onSignIn"></div>
 					</div>
 					<div class="text-center bottom_item">
-						<a class="txt2" href="https://app.digitadooh.com/login">
-							<button class="btn_member">
-								Already A Member? Sign In
+						<a class="txt2 btn_member" href="https://app.digitadooh.com/login">
+							Already A Member? Sign In
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-							</button>
 						</a>
 					</div>
 				</form>
@@ -142,8 +140,7 @@
 	</div>
 	
 	
-
-<script src="https://apis.google.com/js/platform.js" async defer></script>	
+	
 <!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->

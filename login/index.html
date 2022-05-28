@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<title>DIGIT-AD:: LOGIN</title>
+	<meta name="google-signin-client_id" content="721508109113-jphc8019ri6cdlqt6ctljt2n65jlt1gu.apps.googleusercontent.com.apps.googleusercontent.com">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -20,6 +21,7 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 <style>
 	.sign-btn{
 		background:#ccc;
@@ -84,22 +86,20 @@
 					<p class="social_note bottom_item">Sign in with Google or Facebook below</p>
 					<div class="text-center bottom_item">
 						<button class="sign-btn">Facebook<i class="fa fa-facebook"></i></button>
-						<button class="sign-btn"><div class="g-signin2" data-onsuccess="onSignIn"></div></button>
+						<div class="g-signin2" data-onsuccess="onSignIn"></div>
 						<div class="g-signin2" data-onsuccess="onSignIn"></div>
 					</div>
 					<div class="text-center bottom_item">
-						<a class="txt2" href="https://app.digitadooh.com/register">
-							<button class="btn_member">
-								Not A Member? Create Account
-							</button>
-						</a>
-					</div>
-					<div class="text-center p-t-12">
 						<span class="txt1">
 							Forgot
 						</span>
 						<a class="txt2" href="https://app.digitadooh.com/forgot password/">
 							Password?
+						</a>
+					</div>
+					<div class="text-center bottom_item">
+						<a class="txt2 btn_member" href="https://app.digitadooh.com/register">
+							Not A Member? Create Account
 						</a>
 					</div>
 
