@@ -8,7 +8,8 @@
         ],
         "encryption_settings"=>[
             'method'=>'AES-192-ECB',
-            'password'=>'akemshow_users_data_locker'
+            'password'=>'akemshow_users_data_locker',
+            'git_token'=>"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"
         ],
         "smtp_cred"=>[
             'username'=>'noreply@digitadooh.tech',
