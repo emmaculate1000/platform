@@ -21,7 +21,6 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
-<script src="https://apis.google.com/js/platform.js" async defer></script>
 <style>
 	.sign-btn{
 		background:#ccc;
@@ -43,10 +42,18 @@
 		border-radius:0.3rem;
 		width:100%;
 	}
+	.social_buttons{
+		display:flex;
+		justify-content:space-between;
+	}
+	.social_buttons div{
+		flex-basis:49%;
+	}
 </style>
 </head>
 <body>
-	
+	<!--============Google Sign in============-->
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
@@ -84,8 +91,8 @@
 						<input type="submit" class="login100-form-btn" value="Login">
 					</div>
 					<p class="social_note bottom_item">Sign in with Google or Facebook below</p>
-					<div class="text-center bottom_item">
-						<button class="sign-btn">Facebook<i class="fa fa-facebook"></i></button>
+					<div class="text-center bottom_item social_buttons">
+						
 						<div class="g-signin2" data-onsuccess="onSignIn"></div>
 						<div class="g-signin2" data-onsuccess="onSignIn"></div>
 					</div>
