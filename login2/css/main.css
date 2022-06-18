@@ -269,6 +269,15 @@ iframe {
 select{
   border:none;
   color: #686868;
+  font-family: Raleway-SemiBold;
+  font-size: 14px;
+  line-height: 1.2;
+  display: block;
+  width: 100%;
+  background: #e6e6e6;
+  height: 62px;
+  border-radius: 3px;
+  padding: 0 30px 0 65px;
 }
 
 /*------------------------------------------------------------------
