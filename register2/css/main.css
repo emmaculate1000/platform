@@ -427,7 +427,7 @@ select{
 }
 
 .login100-form-btn:hover {
-  background: #333333;
+  background:#15907b;
 }
 
 /*------------------------------------------------------------------
@@ -574,7 +574,7 @@ select{
 }
 .flex-container .input100 {
   font-family: Raleway-SemiBold;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.2;
   color: #686868;
   display: block;
@@ -582,7 +582,7 @@ select{
   background: #e6e6e6;
   height: 62px;
   border-radius: 3px;
-  padding: 0 30px 0 65px;
+  padding: 0 15px 0 15px;
 }
 .flex-container input{
   font-size:14px;
