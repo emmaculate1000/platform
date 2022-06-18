@@ -43,11 +43,13 @@
 		width:100%;
 	}
 	.social_buttons{
-		display:flex;
-		justify-content:space-between;
+	
 	}
 	.social_buttons div{
-		flex-basis:49%;
+		
+	}
+	.g-signin2{
+		border:1px solid "blue"
 	}
 </style>
 </head>
@@ -64,6 +66,10 @@
 					<span class="login100-form-title">
 						Digit-AD Sign Up
 					</span>
+					<p class="social_note bottom_item">Sign up with Google or Facebook below</p>
+					<div class="text-center bottom_item social_buttons">
+						<div class="g-signin2" data-onsuccess="onSignIn"></div>
+					</div>
 					<div class="wrap-input100 validate-input" data-validate = "First Name required">
 						<input class="input100" type="text" id="f-name" placeholder="First Name" required>
 						<span class="focus-input100"></span>
@@ -125,11 +131,6 @@
 							Sign Up
 						</button>
 						
-					</div>
-					
-					<p class="social_note bottom_item">Sign up with Google or Facebook below</p>
-					<div class="text-center bottom_item social_buttons">
-						<div class="g-signin2" data-onsuccess="onSignIn"></div>
 					</div>
 					<div class="text-center bottom_item">
 						<a class="txt2 btn_member" href="https://app.digitadooh.com/login">
