@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<meta name="google-signin-client_id" content="721508109113-jphc8019ri6cdlqt6ctljt2n65jlt1gu.apps.googleusercontent.com.apps.googleusercontent.com">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
 <title>DIGIT-AD:: SIGN UP</title>
@@ -100,7 +100,7 @@
 						<i class="fa fa-facebook-official"></i>
 						Facebook
 					</a>
-					<a href="#" class="btn-google m-b-10">
+					<a href="#" class="btn-google m-b-10" id="my-signin2">
 						<img src="images/icons/icon-google.png" alt="GOOGLE">
 						Google
 					</a>
@@ -116,7 +116,26 @@
 			</div>
 		</div>
 	</div>
-
+	<script>
+		function onSuccess(googleUser) {
+		  console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+		}
+		function onFailure(error) {
+		  console.log(error);
+		}
+		function renderButton() {
+		  gapi.signin2.render('my-signin2', {
+			'scope': 'profile email',
+			'width': 240,
+			'height': 50,
+			'longtitle': true,
+			'theme': 'dark',
+			'onsuccess': onSuccess,
+			'onfailure': onFailure
+		  });
+		}
+	  </script>
+	<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 
 <script src="vendor/bootstrap/js/popper.js"></script>
@@ -125,16 +144,6 @@
 <script src="vendor/select2/select2.min.js"></script>
 
 <script src="js/main.js"></script>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-23581568-13');
-	</script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"71b6caba38f2b77f","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2022.6.0","si":100}' crossorigin="anonymous"></script>
 </body>
 
 </html>

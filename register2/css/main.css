@@ -569,6 +569,7 @@ select{
   justify-content:space-between;
   flex-wrap:nowrap;
   gap:0.3rem;
+  width:100%;
 }
 .flex-container .wrap-input100{
   flex-basis:50%;
