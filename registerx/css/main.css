@@ -1,7 +1,3 @@
-
-
-
-
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
@@ -21,23 +17,8 @@
 }
 
 @font-face {
-  font-family: Raleway-Regular;
-  src: url('../fonts/raleway/Raleway-Regular.ttf'); 
-}
-
-@font-face {
-  font-family: Raleway-Black;
-  src: url('../fonts/raleway/Raleway-Black.ttf'); 
-}
-
-@font-face {
-  font-family: Raleway-SemiBold;
-  src: url('../fonts/raleway/Raleway-SemiBold.ttf'); 
-}
-
-@font-face {
-  font-family: Raleway-Bold;
-  src: url('../fonts/raleway/Raleway-Bold.ttf'); 
+  font-family: Montserrat-Bold;
+  src: url('../fonts/montserrat/Montserrat-Bold.ttf'); 
 }
 
 
@@ -269,15 +250,6 @@ iframe {
 select{
   border:none;
   color: #686868;
-  font-family: Raleway-SemiBold;
-  font-size: 14px;
-  line-height: 1.2;
-  display: block;
-  width: 100%;
-  background: #e6e6e6;
-  height: 62px;
-  border-radius: 3px;
-  padding: 0 30px 0 65px;
 }
 
 /*------------------------------------------------------------------
@@ -578,6 +550,7 @@ select{
   justify-content:space-between;
   flex-wrap:nowrap;
   gap:0.3rem;
+  width:100%;
 }
 .flex-container .wrap-input100{
   flex-basis:50%;
@@ -592,7 +565,7 @@ select{
   background: #e6e6e6;
   height: 62px;
   border-radius: 3px;
-  padding: 0 30px 0 65px;
+  padding: 0 15px 0 15px;
 }
 .flex-container input{
   font-size:14px;
