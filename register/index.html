@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<title>DIGIT-AD::SIGN UP</title>
+	<meta name="google-signin-client_id" content="721508109113-jphc8019ri6cdlqt6ctljt2n65jlt1gu.apps.googleusercontent.com.apps.googleusercontent.com">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -20,19 +21,55 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
+<style>
+	.sign-btn{
+		background:#ccc;
+		padding:0.8rem 0.8rem;
+		border-radius:0.3rem;
+	}
+	.sign-btn i{
+		margin:0 0.4rem;
+	}
+	.social_note{
+		margin:1rem 0;
+	}
+	.bottom_item{
+		margin:1rem 0;
+	}
+	.btn_member{
+		background:#ccc;
+		padding:0.8rem 0.8rem;
+		border-radius:0.3rem;
+		width:100%;
+	}
+	.social_buttons{
+	
+	}
+	.social_buttons div{
+		
+	}
+	.g-signin2{
+		border:1px solid "blue"
+	}
+</style>
 </head>
 <body>
-	
+	<!--============Google Sign in============-->
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="images/img-01.jpg" alt="IMG">
+					<a href="https://www.digitad-ooh.com"><img src="images/img-01.jpg" alt="IMG"></a>
 				</div>
 				<form class="login100-form validate-form">
 					<span class="login100-form-title">
 						Digit-AD Sign Up
 					</span>
+					<p class="social_note bottom_item">Sign up with Google or Facebook below</p>
+					<div class="text-center bottom_item social_buttons">
+						<div class="g-signin2" data-onsuccess="onSignIn"></div>
+					</div>
 					<div class="wrap-input100 validate-input" data-validate = "First Name required">
 						<input class="input100" type="text" id="f-name" placeholder="First Name" required>
 						<span class="focus-input100"></span>
@@ -79,7 +116,7 @@
 						</span>
 					</div>
 					<div class="wrap-input100" style="text-align:center;">
-						<button class="btn btn-md btn-danger message1" style="display:none;"></button>
+						<button class="btn btn-md btn-danger message1" style="display:none;">hello am danger</button>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
 						<input class="input100" type="password" id="password-2" placeholder="Confirm Password">
@@ -93,10 +130,10 @@
 						<button class="login100-form-btn">
 							Sign Up
 						</button>
+						
 					</div>
-
-					<div class="text-center p-t-136">
-						<a class="txt2" href="../login/">
+					<div class="text-center bottom_item">
+						<a class="txt2 btn_member" href="https://app.digitadooh.com/login">
 							Already A Member? Sign In
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>
@@ -110,7 +147,6 @@
 	</div>
 	
 	
-
 	
 <!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
